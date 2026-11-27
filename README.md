@@ -2,7 +2,7 @@
   <img src="docs/assets/readme-header.svg" alt="PaperOEGM — Modular Zero-API-Key Research-to-Paper Plugin" width="100%">
 </p>
 
-**PaperOEGM** (`paper-oegm`) is a modular, zero-API-key research-to-paper plugin for AI coding agents across **Antigravity**, **Claude Code / Cowork**, and **Codex / ChatGPT Work**. Authored by **Chen-XueWen**, it guides researchers from raw ideas, starter codebases, or existing experiment logs to provenance-checked, venue-formatted LaTeX manuscripts through 10 interactive skills, a zero-dependency Python 3.10+ stdlib verification helper, and 5 fresh-context read-only peer-review critics.
+**PaperOEGM** (`paper-oegm` — **O**rchestra-**EGM**, combining PaperOrchestra's staged paper-writing workflow with the Elephant-Goldfish Model's multi-harness plugin and fresh-context review design) is a modular, zero-API-key research-to-paper plugin for AI coding agents across **Antigravity**, **Claude Code / Cowork**, and **Codex / ChatGPT Work**. Authored by **Chen-XueWen**, it guides researchers from raw ideas, starter codebases, or existing experiment logs to provenance-checked, venue-formatted LaTeX manuscripts through 10 interactive skills, a zero-dependency Python 3.10+ stdlib verification helper, and 5 fresh-context read-only peer-review critics.
 
 ## Why PaperOEGM
 

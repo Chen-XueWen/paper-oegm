@@ -95,7 +95,7 @@ If you use **PaperOEGM** in your research workflow, you can cite this repository
 ```bibtex
 @software{chen2026paperoegm,
   title   = {PaperOEGM: A Modular Zero-API-Key Research-to-Paper Plugin for AI Coding Agents},
-  author  = {Chen-XueWen},
+  author  = {Xue Wen Tan},
   year    = {2026},
   version = {0.1.0},
   url     = {https://github.com/Chen-XueWen/paper-oegm}

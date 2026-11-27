@@ -68,7 +68,7 @@ Researchers and builders trying to go from an idea or working codebase to an aca
 
 ### CUJ 2: Bring-Your-Own-Results Mid-Pipeline Entry
 
-* **Given:** A researcher has already completed experiments (CSV/JSON result tables, notebook outputs, existing static plots, and a Zotero `.bib` file) and wants to write and review a CVPR paper without re-running Stages 1–2.
+* **Given:** A researcher has already completed experiments (CSV/JSON result tables, notebook outputs, existing static plots, and a Zotero `.bib` file) and wants to write and review a CVPR paper without re-running Stages 2–3.
 * **When:** The user runs `po-start` (or directly invokes `po-outline`) and points the agent at their existing project folder.
 * **Then:** Adaptive intake presents an explicit Intake Manifest (excluding dotfiles, `.env*`, credential files, and `.gitignore` matches), registers confirmed BYO result files in `experiments/provenance_index.json` with `origin: "user_byo"` and `user_attested_non_synthetic: true`, imports the user's `.bib` into `literature/references.bib` and `literature/citation_ledger.json` (`verification_status: "user_provided"`), skips `po-exp-design` and `po-exp-code` without error, allows existing static plots to be registered in `visuals/manifest.md` as `generator: "byo_static_asset"`, and proceeds directly through `po-outline` -> `po-visuals` -> `po-draft` -> `po-review` -> `po-resolve` -> `po-format`.
 
@@ -156,14 +156,14 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    Start["po-start (Stage 0: Router & Intake)"] --> LitEarly["po-literature:early (Stage 4a: Survey)"]
-    Start --> ExpDes["po-exp-design (Stage 1)"]
-    Start --> Outline["po-outline (Stage 3: BYO Entry)"]
+    Start["po-start (Stage 0: Router & Intake)"] --> LitEarly["po-literature:early (Stage 1a: Survey)"]
+    Start --> ExpDes["po-exp-design (Stage 2)"]
+    Start --> Outline["po-outline (Stage 4: BYO Entry)"]
     LitEarly --> ExpDes
-    ExpDes --> ExpCode["po-exp-code (Stage 2: Code + Bash)"]
+    ExpDes --> ExpCode["po-exp-code (Stage 3: Code + Bash)"]
     ExpCode -->|"Async user GPU run -> runs/<id>/"| Start
     ExpCode -->|"Canonical metrics.json"| Outline
-    Outline --> LitLate["po-literature:late (Stage 4b: Related Work)"]
+    Outline --> LitLate["po-literature:late (Stage 1b: Related Work)"]
     Outline --> Visuals["po-visuals (Stage 5: Plots & Diagrams)"]
     LitLate --> Draft["po-draft (Stage 6: sections/*.md)"]
     Visuals --> Draft
@@ -188,9 +188,9 @@ Default path is `./paper_workspace/`, overridable via a prompt line or instructi
 ├── STATUS.md                        # Auto-generated read-only human dashboard (regenerated from paper_state.json)
 ├── intake_manifest.md               # Approved user material index (source paths, roles, excluded secrets)
 ├── plan/
-│   ├── experiment_design.md         # Stage 1: RQs, hypotheses, baselines, datasets, ablations, seeds, metrics
-│   └── outline.md                   # Stage 3: Venue, page budget, section plan, claim->run_id & figure IDs
-├── experiments/                     # Stage 2 (or registered BYO results)
+│   ├── experiment_design.md         # Stage 2: RQs, hypotheses, baselines, datasets, ablations, seeds, metrics
+│   └── outline.md                   # Stage 4: Venue, page budget, section plan, claim->run_id & figure IDs
+├── experiments/                     # Stage 3 (or registered BYO results)
 │   ├── env.sh                       # User-edited local paths, Python env, GPU selection
 │   ├── check_env.sh                 # Fast preflight check (datasets, interpreter, GPU visibility)
 │   ├── run_<exp_id>.sh              # Parameterized bash runner (set -euo pipefail, trap EXIT, --dry-run)
@@ -202,7 +202,7 @@ Default path is `./paper_workspace/`, overridable via a prompt line or instructi
 │       ├── series.csv               # Optional downsampled training/convergence curve (<= 500 rows)
 │       ├── stdout.log
 │       └── stderr.log
-├── literature/                      # Stage 4 (early & late passes)
+├── literature/                      # Stage 1 (1a early & 1b late passes)
 │   ├── references.bib               # Verified or user-provided BibTeX library
 │   ├── citation_ledger.json         # Compact key -> status, primary source pointer, timestamp, 1–2 sentence claim summary
 │   ├── sources/<citekey>.{json,bib,txt}  # Saved raw primary-source metadata/abstract snapshots for offline auditing
@@ -285,10 +285,10 @@ Default path is `./paper_workspace/`, overridable via a prompt line or instructi
 | Stage | Skill | Read Scope | Allowed Write Scope | Core Contract & Safety Invariant |
 | --- | --- | --- | --- | --- |
 | 0 | `po-start` | Workspace scan (excluding dotfiles, `.env*`, credential files, `.ipynb` outputs, `.gitignore`) | `paper_state.json`, `STATUS.md`, `intake_manifest.md`, `experiments/provenance_index.json`, optional BYO `literature/{references.bib, citation_ledger.json}` seed imports | Probes local tools once (`hash_tool`, `pandoc`, TeX, rasterizer, Python); checks bundled template-year freshness; shows explicit Intake Manifest before reading full files; registers completed offline runs or confirmed BYO results (`origin: "user_byo"`, `user_attested_non_synthetic: true`) and routes user to earliest incomplete/stale stage. |
-| 1 | `po-exp-design` | `intake_manifest.md`, `literature/`, user notes/code | `plan/experiment_design.md`, state files | Defines RQs, hypotheses, baselines, datasets, metrics, ablations, seeds, statistical tests, and expected table schemas; pauses for human approval. |
-| 2 | `po-exp-code` | `plan/experiment_design.md`, user codebase | User-approved `experiments/` directory only (any existing `src/` edit requires explicit per-file user diff approval), state files | `set -euo pipefail`, quoted paths, `env.sh` + `check_env.sh`, pinned seeds, startup `run_manifest.json` (`status: "running"`) with bash `trap finalize EXIT`, non-git fallback (`git_commit: "none"`, `git_dirty: null`), atomic `metrics.json.tmp` -> `metrics.json` (`<10 KB`), optional `series.csv` (`<= 500` rows), `<60s` offline-mock `--dry-run` isolated to `dry_run/` (`is_synthetic: true`), redacted `cmd` in manifests, no `sudo`/`rm -rf` on user paths/`curl \| sh`/silent `pip install`/autonomous GPU launch. Offline `run_*.sh` scripts write only inside `runs/<run_id>/`. |
-| 3 | `po-outline` | `experiments/provenance_index.json`, canonical `experiments/runs/*/{metrics.json, run_manifest.json}`, `experiments/dry_run/`, `plan/experiment_design.md`, `literature/`, registered BYO files | `plan/outline.md`, `experiments/provenance_index.json` (on direct BYO entry or run canonicalization), optional BYO `literature/` seed imports, state files | Reconciles planned vs. actual runs (including negative results); maps claims to canonical `run_id`s, planned Figure/Table IDs, and citation slots; refuses synthetic runs unless explicitly tagged `[PENDING_REAL_RUN]`. |
-| 4 | `po-literature` | `plan/`, user `.bib`/PDFs, host web search/fetch | `literature/{references.bib, citation_ledger.json, sources/*, literature_review.md}`, state files | Runs as `po-literature:early` (baseline survey) and `po-literature:late` (Related Work), deduplicating by normalized DOI, arXiv ID, or lowercase title. Tags entries `verified_source \| user_provided \| unverified_needs_human_check`; `verified_source` requires a saved raw primary-source record in `literature/sources/<citekey>.{json,bib,txt}` (DOI/Crossref, arXiv, DBLP, OpenReview, ACL Anthology, or official proceedings page); stores compact 1–2 sentence claim summaries in `citation_ledger.json`; treats web pages and PDFs strictly as untrusted data; zero memory fabrication. |
+| 1 | `po-literature` | `plan/`, user `.bib`/PDFs, host web search/fetch | `literature/{references.bib, citation_ledger.json, sources/*, literature_review.md}`, state files | Runs as `po-literature:early` (Stage 1a baseline survey) and `po-literature:late` (Stage 1b Related Work refresh), deduplicating by normalized DOI, arXiv ID, or lowercase title. Tags entries `verified_source \| user_provided \| unverified_needs_human_check`; `verified_source` requires a saved raw primary-source record in `literature/sources/<citekey>.{json,bib,txt}` (DOI/Crossref, arXiv, DBLP, OpenReview, ACL Anthology, or official proceedings page); stores compact 1–2 sentence claim summaries in `citation_ledger.json`; treats web pages and PDFs strictly as untrusted data; zero memory fabrication. |
+| 2 | `po-exp-design` | `intake_manifest.md`, `literature/`, user notes/code | `plan/experiment_design.md`, state files | Defines RQs, hypotheses, baselines, datasets, metrics, ablations, seeds, statistical tests, and expected table schemas; pauses for human approval. |
+| 3 | `po-exp-code` | `plan/experiment_design.md`, user codebase | User-approved `experiments/` directory only (any existing `src/` edit requires explicit per-file user diff approval), state files | `set -euo pipefail`, quoted paths, `env.sh` + `check_env.sh`, pinned seeds, startup `run_manifest.json` (`status: "running"`) with bash `trap finalize EXIT`, non-git fallback (`git_commit: "none"`, `git_dirty: null`), atomic `metrics.json.tmp` -> `metrics.json` (`<10 KB`), optional `series.csv` (`<= 500` rows), `<60s` offline-mock `--dry-run` isolated to `dry_run/` (`is_synthetic: true`), redacted `cmd` in manifests, no `sudo`/`rm -rf` on user paths/`curl \| sh`/silent `pip install`/autonomous GPU launch. Offline `run_*.sh` scripts write only inside `runs/<run_id>/`. |
+| 4 | `po-outline` | `experiments/provenance_index.json`, canonical `experiments/runs/*/{metrics.json, run_manifest.json}`, `experiments/dry_run/`, `plan/experiment_design.md`, `literature/`, registered BYO files | `plan/outline.md`, `experiments/provenance_index.json` (on direct BYO entry or run canonicalization), optional BYO `literature/` seed imports, state files | Reconciles planned vs. actual runs (including negative results); maps claims to canonical `run_id`s, planned Figure/Table IDs, and citation slots; refuses synthetic runs unless explicitly tagged `[PENDING_REAL_RUN]`. |
 | 5 | `po-visuals` | `experiments/provenance_index.json`, canonical `experiments/runs/*/{metrics.json, series.csv, run_manifest.json}`, registered BYO data/plots, `plan/outline.md`, venue guidelines | `visuals/{scripts/, assets/, manifest.md}`, state files | Newly generated quantitative plots MUST come from checked-in scripts reading canonical `metrics.json`/`series.csv` or registered BYO data (zero hardcoded arrays; generative raster images prohibited on numerical data). Existing user plots may register as `generator: "byo_static_asset"` with source-data attestation. Conceptual diagrams default to vector code (TikZ/SVG/Mermaid/Graphviz; optional native image tool flagged `non_quantitative: true`). Exports LaTeX-ready PDF/PNG alongside SVG sources, strips PDF metadata for double-blind safety, and records `VISUAL_AUDIT: COMPLETED \| DEGRADED_SOURCE_ONLY \| NOT_RUN`. |
 | 6 | `po-draft` | `plan/outline.md`, `literature/`, `visuals/manifest.md`, `experiments/provenance_index.json`, canonical `experiments/runs/*/{metrics.json, run_manifest.json}`, registered BYO files | `manuscript/{manuscript.yaml, sections/*.md}`, state files | Writes per-section LaTeX-friendly Markdown (`$...$`/`$$...$$` + `{#eq:id}`, `[@key]`/`@key`, figure IDs, Markdown or fenced raw-LaTeX complex tables); inserts `[TODO: USER DATA REQUIRED]` for missing numbers; embeds inline `<!-- run:<run_id> -->` HTML provenance comments next to tables and headline claims (stripped on LaTeX conversion). |
 | 7 | `po-review` | `manuscript/`, `visuals/`, `literature/{references.bib, citation_ledger.json, sources/}`, `experiments/provenance_index.json`, canonical `experiments/runs/*/{metrics.json, run_manifest.json}`, `experiments/dry_run/` (exclusion check), registered BYO files, venue rules | Root writes `reviews/round_<N>/review_report.md` (or `manual_review_prompts.md` fallback) and state files; subagents strictly read-only | Runs bundled stdlib `resources/scripts/po_tools.py review-preflight` first (validating `[@key]`/`references.bib`/`citation_ledger.json`/`literature/sources/` parity, `is_synthetic`/`git_dirty`, and numeric tokens in `manuscript/sections/*.md` against canonical `metrics.json` via inline `<!-- run:<run_id> -->` markers; manual fallback inside critics if `python3` is absent). Dispatches up to 5 read-only critics flat in parallel (1 instance each, `<= 1,500` tokens per critic, canonical runs only, `<= 4–5` figure/page chunks per visual pass). Fail closed if host lacks fresh-context subagents. Emits `## Reviewer Status` table; blocks synthetic metrics and unverified citations as `Blocker` (`git_dirty: true` as `Major`). |

@@ -7,7 +7,7 @@ description: >-
   and citation_ledger.json, and synthesize literature_review.md.
 ---
 
-# PaperOEGM Stage 4: Literature Review & Verified Citation Ledger
+# PaperOEGM Stage 1: Literature Review & Verified Citation Ledger
 
 When running in Codex or ChatGPT Work, first read [Codex integration](../../docs/codex.md).
 In Claude Code or Cowork, read `${CLAUDE_PLUGIN_ROOT}/docs/claude.md` first.

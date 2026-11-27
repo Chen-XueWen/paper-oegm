@@ -1,6 +1,6 @@
 # Experiment Safety & Provenance Protocol
 
-This protocol governs `po-exp-code` (Stage 2) and experiment run auditing in downstream stages.
+This protocol governs `po-exp-code` (Stage 3) and experiment run auditing in downstream stages.
 
 ## Bash Runner Safety Contract
 

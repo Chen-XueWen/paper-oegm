@@ -18,8 +18,8 @@ Relative paths resolve against the current working directory. If an instructions
 ├── STATUS.md                        # Auto-generated read-only dashboard regenerated from paper_state.json
 ├── intake_manifest.md               # User-approved inventory of project files, roles, and excluded secrets
 ├── plan/
-│   ├── experiment_design.md         # Stage 1: RQs, hypotheses, baselines, datasets, ablations, seeds, metrics
-│   └── outline.md                   # Stage 3: Section plan (mirrors venue/page budget from paper_state.json), claim->run_id & figure IDs
+│   ├── experiment_design.md         # Stage 2: RQs, hypotheses, baselines, datasets, ablations, seeds, metrics
+│   └── outline.md                   # Stage 4: Section plan (mirrors venue/page budget from paper_state.json), claim->run_id & figure IDs
 ├── experiments/
 │   ├── env.sh / check_env.sh / run_<exp_id>.sh
 │   ├── provenance_index.json        # Run registry (origin: po_exp_code | user_byo)

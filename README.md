@@ -22,10 +22,10 @@
 | Stage | Skill | Purpose | Primary Output |
 | --- | --- | --- | --- |
 | 0 | `po-start` | Workspace router, adaptive intake (secret denylist), tool probe, template-year check, BYO & run registration | `paper_state.json`, `STATUS.md`, `intake_manifest.md` |
-| 1 | `po-exp-design` | Research questions, falsifiable hypotheses, fair baselines, ablations, seeds, and metric schemas | `plan/experiment_design.md` |
-| 2 | `po-exp-code` | Parameterized experiment code, `env.sh`, `check_env.sh`, and safe `set -euo pipefail` / `trap EXIT` bash runners | `experiments/run_*.sh`, `dry_run/` smoke checks |
-| 3 | `po-outline` | Reconciles planned vs. actual canonical runs (including negative results) and maps claims to sections & figures | `plan/outline.md` |
-| 4 | `po-literature` | Dual-phase survey (`early` before experiments; `late` before drafting) with primary-source snapshots & deduplication | `literature/{references.bib, citation_ledger.json, sources/, literature_review.md}` |
+| 1 | `po-literature` | Dual-phase literature review (`1a` early baseline survey before experiments; `1b` late Related Work refresh after `po-outline`) with primary-source snapshots & deduplication | `literature/{references.bib, citation_ledger.json, sources/, literature_review.md}` |
+| 2 | `po-exp-design` | Research questions, falsifiable hypotheses, fair baselines, ablations, seeds, and metric schemas | `plan/experiment_design.md` |
+| 3 | `po-exp-code` | Parameterized experiment code, `env.sh`, `check_env.sh`, and safe `set -euo pipefail` / `trap EXIT` bash runners | `experiments/run_*.sh`, `dry_run/` smoke checks |
+| 4 | `po-outline` | Reconciles planned vs. actual canonical runs (including negative results) and maps claims to sections & figures | `plan/outline.md` |
 | 5 | `po-visuals` | Reproducible Python plots reading canonical `metrics.json` + vector conceptual diagrams with `VISUAL_AUDIT` status | `visuals/{scripts/, assets/, manifest.md}` |
 | 6 | `po-draft` | Single-source per-section LaTeX-friendly Markdown with inline `<!-- run:<run_id> -->` provenance comments | `manuscript/{manuscript.yaml, sections/*.md}` |
 | 7 | `po-review` | Runs `po_tools.py review-preflight` and dispatches up to 5 read-only critics flat in parallel (fail-closed isolation) | `reviews/round_<N>/review_report.md` |

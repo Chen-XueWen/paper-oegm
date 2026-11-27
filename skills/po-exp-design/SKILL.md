@@ -7,7 +7,7 @@ description: >-
   and metric schemas in plan/experiment_design.md.
 ---
 
-# PaperOEGM Stage 1: Experiment Design
+# PaperOEGM Stage 2: Experiment Design
 
 When running in Codex or ChatGPT Work, first read [Codex integration](../../docs/codex.md).
 In Claude Code or Cowork, read `${CLAUDE_PLUGIN_ROOT}/docs/claude.md` first.

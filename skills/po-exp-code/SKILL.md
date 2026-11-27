@@ -7,7 +7,7 @@ description: >-
   scripts emitting run_manifest.json and metrics.json.
 ---
 
-# PaperOEGM Stage 2: Experiment Code & Runnable Bash Scripts
+# PaperOEGM Stage 3: Experiment Code & Runnable Bash Scripts
 
 When running in Codex or ChatGPT Work, first read [Codex integration](../../docs/codex.md).
 In Claude Code or Cowork, read `${CLAUDE_PLUGIN_ROOT}/docs/claude.md` first.

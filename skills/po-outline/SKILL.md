@@ -7,7 +7,7 @@ description: >-
   and citations into plan/outline.md.
 ---
 
-# PaperOEGM Stage 3: Paper Outline & Evidence Mapping
+# PaperOEGM Stage 4: Paper Outline & Evidence Mapping
 
 When running in Codex or ChatGPT Work, first read [Codex integration](../../docs/codex.md).
 In Claude Code or Cowork, read `${CLAUDE_PLUGIN_ROOT}/docs/claude.md` first.

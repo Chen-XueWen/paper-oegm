@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "entries": {
+    "kwon2023vllm": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/kwon2023vllm.json"
+    },
+    "zhang2023h2o": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/zhang2023h2o.json"
+    },
+    "xiao2024streaming": {
+      "verification_status": "unverified_needs_human_check",
+      "source_file": null
+    }
+  }
+}

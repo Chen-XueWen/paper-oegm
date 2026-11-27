@@ -1,0 +1,21 @@
+{
+  "run_id": "exp04_hybrid_agg",
+  "status": "completed",
+  "started_at": "2026-11-27T14:22:03Z",
+  "finished_at": "2026-11-27T14:22:03Z",
+  "exit_code": 0,
+  "is_synthetic": false,
+  "git_commit": "dba1564eb962b9f5bf54a3f7c58e52cde4d4db7d",
+  "git_dirty": false,
+  "cmd": "aggregate_runs.py --agg-id exp04_hybrid_agg --sources exp04_hybrid_s42,exp04_hybrid_s43,exp04_hybrid_s44",
+  "source_runs": [
+    "exp04_hybrid_s42",
+    "exp04_hybrid_s43",
+    "exp04_hybrid_s44"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ]
+}

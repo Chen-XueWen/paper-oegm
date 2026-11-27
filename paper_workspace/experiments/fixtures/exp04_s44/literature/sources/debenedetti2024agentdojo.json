@@ -1,0 +1,6 @@
+{
+  "citekey": "debenedetti2024agentdojo",
+  "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+  "abstract": "AgentDojo provides 97 realistic tasks and 629 security test cases showing that tool-filter defenses reduce attack success rate but still leave over 20% utility-security gap on frontier models.",
+  "year": 2024
+}

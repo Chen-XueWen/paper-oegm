@@ -1,0 +1,238 @@
+{
+  "run_id": "exp01_faultbench_agg",
+  "is_synthetic": false,
+  "source_runs": [
+    "exp01_faultbench_s42",
+    "exp01_faultbench_s43",
+    "exp01_faultbench_s44",
+    "exp01_faultbench_s45",
+    "exp01_faultbench_s46"
+  ],
+  "metrics": {
+    "n_positive": {
+      "mean": 80.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "n_negative": {
+      "mean": 40.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "n_evasion": {
+      "mean": 20.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "full_precision": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "full_f1": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "full_fpr": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "no_inline_prov_recall": {
+      "mean": 87.5,
+      "std": 0.0,
+      "n": 5
+    },
+    "no_inline_prov_precision": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "no_inline_prov_f1": {
+      "mean": 93.33,
+      "std": 0.0,
+      "n": 5
+    },
+    "no_inline_prov_fpr": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "compiler_only_recall": {
+      "mean": 6.25,
+      "std": 0.0,
+      "n": 5
+    },
+    "compiler_only_precision": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "compiler_only_f1": {
+      "mean": 11.76,
+      "std": 0.0,
+      "n": 5
+    },
+    "compiler_only_fpr": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "evasion_det_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "mean_latency_ms": {
+      "mean": 115.72,
+      "std": 6.03,
+      "n": 5
+    },
+    "per_family_f1_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f1_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f1_b0_recall": {
+      "mean": 50.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f2_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f2_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f2_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f3_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f3_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f3_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f4_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f4_b1_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f4_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f5_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f5_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f5_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f6_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f6_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f6_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f7_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f7_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f7_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f8_full_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f8_b1_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_family_f8_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_evasion_e1_full_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_evasion_e2_full_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_evasion_e3_full_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_evasion_e4_full_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "runs": {
+    "exp_sec_s44": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp_sec_s44/metrics.json",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp_sec_s44_mock": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp_sec_s44_mock/metrics.json",
+      "is_synthetic": true,
+      "user_attested_non_synthetic": false
+    }
+  }
+}

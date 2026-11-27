@@ -1,0 +1,17 @@
+{
+  "citekey": "wang2026skilltester",
+  "source_type": "arxiv_atom_api",
+  "arxiv_id": "2603.28815",
+  "doi": null,
+  "primary_url": "https://arxiv.org/abs/2603.28815",
+  "published": "2026-03-28T14:56:18Z",
+  "authors": [
+    "Leye Wang",
+    "Zixing Wang",
+    "Anjie Xu"
+  ],
+  "title": "SkillTester: Benchmarking Utility and Security of Agent Skills",
+  "comment": "Technical report, 13 pages, 2 figures, 9 tables. Project page: https://skilltester.ai. Code: https://github.com/skilltester-ai/skilltester",
+  "abstract": "This technical report presents SkillTester, a tool for evaluating the utility and security of agent skills. Its evaluation framework combines paired baseline and with-skill execution conditions with a separate security probe suite. Grounded in a comparative utility principle and a user-facing simplicity principle, the framework normalizes raw execution artifacts into a utility score, a security score, and a three-level security status label. More broadly, it can be understood as a comparative quality-assurance harness for agent skills in an agent-first world. The public service is deployed at https://skilltester.ai, and the broader project is maintained at https://github.com/skilltester-ai/skilltester.",
+  "retrieved_at": "2026-11-27T13:57:04Z"
+}

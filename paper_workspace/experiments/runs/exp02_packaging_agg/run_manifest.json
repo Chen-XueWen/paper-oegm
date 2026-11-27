@@ -1,0 +1,25 @@
+{
+  "run_id": "exp02_packaging_agg",
+  "status": "completed",
+  "started_at": "2026-11-27T14:22:03Z",
+  "finished_at": "2026-11-27T14:22:03Z",
+  "exit_code": 0,
+  "is_synthetic": false,
+  "git_commit": "dba1564eb962b9f5bf54a3f7c58e52cde4d4db7d",
+  "git_dirty": false,
+  "cmd": "aggregate_runs.py --agg-id exp02_packaging_agg --sources exp02_packaging_s42,exp02_packaging_s43,exp02_packaging_s44,exp02_packaging_s45,exp02_packaging_s46",
+  "source_runs": [
+    "exp02_packaging_s42",
+    "exp02_packaging_s43",
+    "exp02_packaging_s44",
+    "exp02_packaging_s45",
+    "exp02_packaging_s46"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}

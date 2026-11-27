@@ -1,0 +1,5 @@
+step,scale,citations,runs,state_sync_ms_mean,state_sync_ms_std,review_preflight_ms_mean,review_preflight_ms_std,format_verify_ms_mean,format_verify_ms_std,check_readonly_ms_mean,check_readonly_ms_std,total_ms_mean,total_ms_std,ledger_bytes_mean,ledger_bytes_std,sources_bytes_mean,sources_bytes_std,offload_pct_mean,offload_pct_std
+20,S,20,5,133.51,4.51,40.7,3.92,41.32,2.39,44.83,2.04,260.37,8.73,4069.0,0.0,29350.0,0.0,87.82,0.0
+50,M,50,10,133.57,4.55,41.73,2.6,41.98,1.89,46.61,2.76,263.89,6.85,10099.0,0.0,73470.0,0.0,87.92,0.0
+80,L,80,20,132.95,2.8,43.57,3.33,40.62,1.93,51.61,3.13,268.75,2.28,16129.0,0.0,117570.0,0.0,87.94,0.0
+120,XL,120,30,134.18,1.83,41.68,0.98,40.94,2.61,55.68,1.08,272.48,3.99,24169.0,0.0,176550.0,0.0,87.96,0.0

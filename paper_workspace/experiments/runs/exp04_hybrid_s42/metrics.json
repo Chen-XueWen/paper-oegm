@@ -1,0 +1,64 @@
+{
+  "run_id": "exp04_hybrid_s42",
+  "is_synthetic": false,
+  "metrics": {
+    "seed": 42,
+    "domain": "ml_systems",
+    "det_mech_recall": 100.0,
+    "det_sem_recall": 0.0,
+    "det_total_recall": 50.0,
+    "critic_mech_recall": 100.0,
+    "critic_sem_recall": 100.0,
+    "critic_total_recall": 100.0,
+    "hybrid_mech_recall": 100.0,
+    "hybrid_sem_recall": 100.0,
+    "hybrid_total_recall": 100.0,
+    "clean_control_fp": 0,
+    "readonly_mutations": 0,
+    "critics_completed": 5,
+    "max_critic_tokens": 1394,
+    "critic_tokens": {
+      "po-peer-reviewer": 1390,
+      "po-evidence-auditor": 797,
+      "po-citation-auditor": 887,
+      "po-visual-format-critic": 1161,
+      "po-clarity-reader": 1394
+    },
+    "per_defect_det": {
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "M5": true,
+      "S1": false,
+      "S2": false,
+      "S3": false,
+      "S4": false,
+      "S5": false
+    },
+    "per_defect_critic": {
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "M5": true,
+      "S1": true,
+      "S2": true,
+      "S3": true,
+      "S4": true,
+      "S5": true
+    },
+    "per_defect_hybrid": {
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "M5": true,
+      "S1": true,
+      "S2": true,
+      "S3": true,
+      "S4": true,
+      "S5": true
+    }
+  }
+}

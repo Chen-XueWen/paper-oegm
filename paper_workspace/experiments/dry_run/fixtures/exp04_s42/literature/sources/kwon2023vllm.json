@@ -1,0 +1,6 @@
+{
+  "citekey": "kwon2023vllm",
+  "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+  "abstract": "PagedAttention reduces KV-cache memory waste to under 4% and improves throughput by 2x to 4x over FasterTransformer without degrading output accuracy.",
+  "year": 2023
+}

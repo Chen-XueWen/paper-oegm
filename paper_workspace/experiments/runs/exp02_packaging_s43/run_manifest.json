@@ -1,0 +1,19 @@
+{
+  "run_id": "exp02_packaging_s43",
+  "status": "completed",
+  "started_at": "2026-11-27T14:17:37Z",
+  "finished_at": "2026-11-27T14:17:38Z",
+  "exit_code": 0,
+  "is_synthetic": false,
+  "git_commit": "dba1564eb962b9f5bf54a3f7c58e52cde4d4db7d",
+  "git_dirty": false,
+  "cmd": "paper_workspace/experiments/run_exp02_packaging.sh --seed 43",
+  "seeds": [
+    43
+  ],
+  "hardware": {
+    "hostname_hash": "sha256:c7236099b35d86b7",
+    "gpu": "cpu",
+    "cpu_count": 14
+  }
+}

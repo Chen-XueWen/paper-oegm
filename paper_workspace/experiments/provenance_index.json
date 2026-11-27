@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "runs": {
+    "exp01_faultbench_agg": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp01_faultbench_agg/metrics.json",
+      "content_hash": "sha256:7bc72f77a374bd8c0b9c0953e4e08d4f2e6aba2d5e7c3ebf8f88c45b0c7a1a78",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp01_faultbench_s42": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp01_faultbench_s42/metrics.json",
+      "content_hash": "sha256:44a8bc71fbd6de6ab27158df7cc696dc89db1246b6b17cb526c9b8556b1a16bc",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp01_faultbench_s43": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp01_faultbench_s43/metrics.json",
+      "content_hash": "sha256:5579d2c81e8c701286d7b2b77bafbd85b6220e14cd91dfec6a4432468342d4bf",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp01_faultbench_s44": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp01_faultbench_s44/metrics.json",
+      "content_hash": "sha256:2a5a27f9f445bbf29fbbc838180a2e66ef8774086d353e0a5188e93585cae254",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp01_faultbench_s45": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp01_faultbench_s45/metrics.json",
+      "content_hash": "sha256:8be93adb6e201ba23052aaa249dcf8b4d09078f63a4c8c6486e81d9f4a979791",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp01_faultbench_s46": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp01_faultbench_s46/metrics.json",
+      "content_hash": "sha256:857ce06f3a49f5647758033b28da8907dea9542b7f01798ad2f69a67a01c499b",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp02_packaging_agg": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp02_packaging_agg/metrics.json",
+      "content_hash": "sha256:8a0ae0bf50b16aad3cce1659a0cb88095f910e0e795b90cce8afe7578a15de51",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp02_packaging_s42": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp02_packaging_s42/metrics.json",
+      "content_hash": "sha256:c2d73c037687f053ec5d0043dcfd5a2bcaca6082cd625af3210d94c76e57c8ee",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp02_packaging_s43": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp02_packaging_s43/metrics.json",
+      "content_hash": "sha256:a50aad94b211af9cd15df06677e7b6dbd79b9f796444e312187083445b228509",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp02_packaging_s44": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp02_packaging_s44/metrics.json",
+      "content_hash": "sha256:9b6b1d163d14ffad1c5bc8057e532b5fd0e438f358289c0d591294f429b2f44f",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp02_packaging_s45": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp02_packaging_s45/metrics.json",
+      "content_hash": "sha256:5bd007304ea5b663e7b8dc4d7c8cebdfc1f64962613c68f0000f4091c14c533f",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp02_packaging_s46": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp02_packaging_s46/metrics.json",
+      "content_hash": "sha256:67c73f8bf298f7091a05d2c7e5ad8b327abcf8c7160ea09d1e0584f7d47d55e6",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp03_scalability_agg": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp03_scalability_agg/metrics.json",
+      "content_hash": "sha256:057b7fc536456526f948578a44deedc93e3ad2c49c7594b9d5a7000b6e5b4810",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp03_scalability_s42": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp03_scalability_s42/metrics.json",
+      "content_hash": "sha256:8890533726c53dc05b2f479c5cd61f651e53d014724afdd200a19a1c3c1186a6",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp03_scalability_s43": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp03_scalability_s43/metrics.json",
+      "content_hash": "sha256:42708aa6e7b18861af0e56b3be85d4af8f02ec5962c1512e23d2b8ad4a362f7d",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp03_scalability_s44": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp03_scalability_s44/metrics.json",
+      "content_hash": "sha256:c4834559e90fe2ee8ee1cd96eaa55841ccc6a80efbb359a12942753bdef538a3",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp03_scalability_s45": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp03_scalability_s45/metrics.json",
+      "content_hash": "sha256:feccae00f3253ea59aa5dc7b701cc93fc0db85b415e20a60470a83b2825c53d4",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp03_scalability_s46": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp03_scalability_s46/metrics.json",
+      "content_hash": "sha256:99b3c5d90ab5a959a669b18dd5bb1dc49ff2b861813b2b9eb6258b5f34e4a52b",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp04_hybrid_agg": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp04_hybrid_agg/metrics.json",
+      "content_hash": "sha256:e9dfdd73c90c489aba2e933afe4b3b5526f326074c14e119b832dfb46d9a19b6",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp04_hybrid_s42": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp04_hybrid_s42/metrics.json",
+      "content_hash": "sha256:1f217a4442399b61613b1acbc89feb8a19b7db41fff2dffa67687166cfdbd110",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp04_hybrid_s43": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp04_hybrid_s43/metrics.json",
+      "content_hash": "sha256:94b34a5606196364c58a83a1f9e1b69db8c25a9094b7cdda01e60ceb2d704535",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    },
+    "exp04_hybrid_s44": {
+      "origin": "po_exp_code",
+      "status": "canonical",
+      "source_path": "experiments/runs/exp04_hybrid_s44/metrics.json",
+      "content_hash": "sha256:dd588fe2e52545e2ebfc34df60996e83c0cf0f18ca7b852558aad99f2f493c42",
+      "is_synthetic": false,
+      "user_attested_non_synthetic": false
+    }
+  }
+}

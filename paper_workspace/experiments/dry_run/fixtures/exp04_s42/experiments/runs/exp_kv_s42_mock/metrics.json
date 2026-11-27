@@ -1,0 +1,7 @@
+{
+  "run_id": "exp_kv_s42_mock",
+  "is_synthetic": true,
+  "metrics": {
+    "ablation_score": 81.5
+  }
+}

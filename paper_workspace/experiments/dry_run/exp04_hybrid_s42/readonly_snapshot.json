@@ -1,0 +1,24 @@
+{
+  "workspace": "/Users/xwtan/Documents/paper-orchestra-agy-plugin/paper_workspace/experiments/dry_run/fixtures/exp04_s42",
+  "files": {
+    "intake_manifest.md": "sha256:808c5a882000dac94b9e9b6d6c8734ae584daff7f9c51202de992fe2f293e66c",
+    "paper_state.json": "sha256:19ff8812c978f1a83b7bbf93fa774474c429193b01ad05b92dcdcc5cd1c2507e",
+    "experiments/provenance_index.json": "sha256:49a6f4f3976818f77a687157708b42f993a1f3f1dff5dcbdd7c4896d28d4f9de",
+    "experiments/runs/exp_kv_s42/metrics.json": "sha256:f51331c54e42ceac6164238ee492d587fc2749862e3d44a5137272129b39a844",
+    "experiments/runs/exp_kv_s42/run_manifest.json": "sha256:9a8ab3e5cf9f5693ad0cd7aa14527a79262bb8aa848324562d012da1b87df967",
+    "experiments/runs/exp_kv_s42_mock/metrics.json": "sha256:64d4fcb414687016d1afa463adc5a73e69a5177b42a117ceb98643c5d99ef32b",
+    "experiments/runs/exp_kv_s42_mock/run_manifest.json": "sha256:f7b0d1929165ac9399abef720714ce71b42390a1960865952110339a5ad3d4e3",
+    "literature/citation_ledger.json": "sha256:5d8835ac4bc229e97192a028dcfddbd5cd1b9f4937ea08d5bcaea66302ed4b99",
+    "literature/references.bib": "sha256:48a383e59e53359393a7c2fb8b617506dd6564dc6306592bd532adecd36a2825",
+    "literature/sources/kwon2023vllm.json": "sha256:f6f44649733a46a5ba0f440a0c7a775bc4b095abb64ab9e093a83f646d89307a",
+    "literature/sources/xiao2024streaming.json": "sha256:781456d2c0fedce3448f4b68078b1669d5a309d77f1597a18c8ba5bd025e2063",
+    "literature/sources/zhang2023h2o.json": "sha256:d0aa772724dc1c59f2144b2f5a4e1b097b11c8df91111d91d12b48f182e42029",
+    "manuscript/sections/01_intro.md": "sha256:0ad4258994996ce3d394de69ee643aa4311007ed921b315f7ff3d5673edf8f6a",
+    "manuscript/sections/02_results.md": "sha256:dfb0f60d38294f877f3beeddc201c9d6457c4e672a33ee0675a10d54892cb8d9",
+    "submission/main.tex": "sha256:6dfef999400480e8db04b0a2f35b207581f94195830e4e1d9bd001dc6b8f4976",
+    "submission/sections/01_intro.tex": "sha256:2950ee4ef8c38310d6a99db57d946931f2dfd224bfb5913d14117a14466436f2",
+    "submission/sections/02_results.tex": "sha256:d83229e2fa4291a66c9cf9ffcf857bd2890808248c5d976d0c0a6384908f8264",
+    "visuals/manifest.md": "sha256:43d86387ef4d1eaf5ad76dd23612cc2ad65d22ac649385616f127620fadf33ad",
+    "visuals/figures/fig_results.png": "sha256:bc5ebe8ad893773c34841bdce6bd1923fd8d82695653855e920f127f6b8f9d6d"
+  }
+}

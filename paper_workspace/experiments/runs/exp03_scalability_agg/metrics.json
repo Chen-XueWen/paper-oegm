@@ -1,0 +1,128 @@
+{
+  "run_id": "exp03_scalability_agg",
+  "is_synthetic": false,
+  "source_runs": [
+    "exp03_scalability_s42",
+    "exp03_scalability_s43",
+    "exp03_scalability_s44",
+    "exp03_scalability_s45",
+    "exp03_scalability_s46"
+  ],
+  "metrics": {
+    "xl_total_ms": {
+      "mean": 272.48,
+      "std": 3.99,
+      "n": 5
+    },
+    "xl_state_sync_ms": {
+      "mean": 134.18,
+      "std": 1.83,
+      "n": 5
+    },
+    "xl_review_preflight_ms": {
+      "mean": 41.68,
+      "std": 0.98,
+      "n": 5
+    },
+    "xl_format_verify_ms": {
+      "mean": 40.94,
+      "std": 2.61,
+      "n": 5
+    },
+    "xl_check_readonly_ms": {
+      "mean": 55.68,
+      "std": 1.08,
+      "n": 5
+    },
+    "ledger_bytes_xl": {
+      "mean": 24169.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "sources_bytes_xl": {
+      "mean": 176550.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "context_offload_pct": {
+      "mean": 87.96,
+      "std": 0.0,
+      "n": 5
+    },
+    "venues_tested": {
+      "mean": 3.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "venues_compiled_ok": {
+      "mean": 3.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "pdfinfo_leaks": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "pdfinfo_generic_creator_tags": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "compile_acmart_sigplan_ms": {
+      "mean": 1844.44,
+      "std": 16.46,
+      "n": 5
+    },
+    "compile_cvpr2025_ms": {
+      "mean": 1388.22,
+      "std": 17.73,
+      "n": 5
+    },
+    "compile_iclr2025_ms": {
+      "mean": 1079.45,
+      "std": 13.33,
+      "n": 5
+    },
+    "scale_s_total_ms": {
+      "mean": 260.37,
+      "std": 8.73,
+      "n": 5
+    },
+    "scale_s_offload_pct": {
+      "mean": 87.82,
+      "std": 0.0,
+      "n": 5
+    },
+    "scale_m_total_ms": {
+      "mean": 263.89,
+      "std": 6.85,
+      "n": 5
+    },
+    "scale_m_offload_pct": {
+      "mean": 87.92,
+      "std": 0.0,
+      "n": 5
+    },
+    "scale_l_total_ms": {
+      "mean": 268.75,
+      "std": 2.28,
+      "n": 5
+    },
+    "scale_l_offload_pct": {
+      "mean": 87.94,
+      "std": 0.0,
+      "n": 5
+    },
+    "scale_xl_total_ms": {
+      "mean": 272.48,
+      "std": 3.99,
+      "n": 5
+    },
+    "scale_xl_offload_pct": {
+      "mean": 87.96,
+      "std": 0.0,
+      "n": 5
+    }
+  }
+}

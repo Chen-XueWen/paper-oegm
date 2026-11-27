@@ -1,0 +1,9 @@
+{
+  "run_id": "exp_tta_s43",
+  "is_synthetic": false,
+  "metrics": {
+    "primary_score": 76.2,
+    "secondary_metric": 61.8,
+    "num_corruptions_tested": 5
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "run_id": "exp_tta_s43_mock",
+  "is_synthetic": true,
+  "metrics": {
+    "ablation_score": 81.5
+  }
+}

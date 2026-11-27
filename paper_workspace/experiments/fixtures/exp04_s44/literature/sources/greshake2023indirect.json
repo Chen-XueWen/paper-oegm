@@ -1,0 +1,6 @@
+{
+  "citekey": "greshake2023indirect",
+  "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+  "abstract": "Indirect prompt injections hidden in retrieved web pages or local files can hijack LLM-integrated applications into data exfiltration and arbitrary tool invocation.",
+  "year": 2023
+}

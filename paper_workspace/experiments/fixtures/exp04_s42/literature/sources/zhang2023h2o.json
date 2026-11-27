@@ -1,0 +1,6 @@
+{
+  "citekey": "zhang2023h2o",
+  "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+  "abstract": "We show that retaining heavy-hitter tokens and recent tokens reduces KV-cache memory by 5x while maintaining generation quality, though heavy-hitter eviction incurs a 1.8% accuracy drop at 20% cache budget.",
+  "year": 2023
+}

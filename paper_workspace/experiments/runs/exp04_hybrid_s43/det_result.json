@@ -1,0 +1,61 @@
+{
+  "preflight_rc": 1,
+  "format_rc": 1,
+  "preflight_blockers": [
+    {
+      "category": "citation",
+      "issue": "Cited key 'hendrycks2019robustness' is tagged unverified_needs_human_check"
+    },
+    {
+      "category": "citation",
+      "issue": "Cited key 'patel2025ghosttta' missing from literature/references.bib"
+    },
+    {
+      "category": "citation",
+      "issue": "Cited key 'patel2025ghosttta' missing from literature/citation_ledger.json"
+    },
+    {
+      "category": "evidence",
+      "issue": "02_results.md references experiments/dry_run/ path"
+    },
+    {
+      "category": "evidence",
+      "issue": "02_results.md reports decimal '82.9' under run 'exp_tta_s43' not matching experiments/runs/exp_tta_s43/metrics.json"
+    },
+    {
+      "category": "evidence",
+      "issue": "Referenced run_id 'exp_tta_s43_mock' has is_synthetic=true"
+    },
+    {
+      "category": "evidence",
+      "issue": "run_manifest.json for 'exp_tta_s43_mock' has is_synthetic=true"
+    },
+    {
+      "category": "evidence",
+      "issue": "experiments/runs/exp_tta_s43_mock/metrics.json has is_synthetic=true"
+    }
+  ],
+  "format_blockers": [
+    {
+      "category": "parity",
+      "issue": "01_intro.tex dropped decimal tokens: ['82.0']"
+    },
+    {
+      "category": "anonymity",
+      "issue": "Non-anonymous GitHub URL in 01_intro.tex"
+    }
+  ],
+  "detected": {
+    "M1": true,
+    "M2": true,
+    "M3": true,
+    "M4": true,
+    "M5": true,
+    "S1": false,
+    "S2": false,
+    "S3": false,
+    "S4": false,
+    "S5": false
+  },
+  "clean_fp": 0
+}

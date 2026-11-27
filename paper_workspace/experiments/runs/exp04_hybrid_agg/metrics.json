@@ -1,0 +1,144 @@
+{
+  "run_id": "exp04_hybrid_agg",
+  "is_synthetic": false,
+  "source_runs": [
+    "exp04_hybrid_s42",
+    "exp04_hybrid_s43",
+    "exp04_hybrid_s44"
+  ],
+  "metrics": {
+    "seed": {
+      "mean": 43.0,
+      "std": 1.0,
+      "n": 3
+    },
+    "det_mech_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "det_sem_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "det_total_recall": {
+      "mean": 50.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "critic_mech_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "critic_sem_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "critic_total_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "hybrid_mech_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "hybrid_sem_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "hybrid_total_recall": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "clean_control_fp": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "readonly_mutations": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "critics_completed": {
+      "mean": 5.0,
+      "std": 0.0,
+      "n": 3
+    },
+    "max_critic_tokens": {
+      "mean": 1411.0,
+      "std": 35.68,
+      "n": 3
+    },
+    "critic_tokens": {
+      "po-peer-reviewer": {
+        "mean": 1363.0,
+        "std": 44.19,
+        "n": 3
+      },
+      "po-evidence-auditor": {
+        "mean": 830.67,
+        "std": 31.34,
+        "n": 3
+      },
+      "po-citation-auditor": {
+        "mean": 923.33,
+        "std": 31.79,
+        "n": 3
+      },
+      "po-visual-format-critic": {
+        "mean": 1108.33,
+        "std": 64.78,
+        "n": 3
+      },
+      "po-clarity-reader": {
+        "mean": 1400.33,
+        "std": 48.81,
+        "n": 3
+      }
+    },
+    "per_defect_det": {
+      "M1": 100.0,
+      "M2": 100.0,
+      "M3": 100.0,
+      "M4": 100.0,
+      "M5": 100.0,
+      "S1": 0.0,
+      "S2": 0.0,
+      "S3": 0.0,
+      "S4": 0.0,
+      "S5": 0.0
+    },
+    "per_defect_critic": {
+      "M1": 100.0,
+      "M2": 100.0,
+      "M3": 100.0,
+      "M4": 100.0,
+      "M5": 100.0,
+      "S1": 100.0,
+      "S2": 100.0,
+      "S3": 100.0,
+      "S4": 100.0,
+      "S5": 100.0
+    },
+    "per_defect_hybrid": {
+      "M1": 100.0,
+      "M2": 100.0,
+      "M3": 100.0,
+      "M4": 100.0,
+      "M5": 100.0,
+      "S1": 100.0,
+      "S2": 100.0,
+      "S3": 100.0,
+      "S4": 100.0,
+      "S5": 100.0
+    }
+  }
+}

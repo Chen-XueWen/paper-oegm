@@ -1,0 +1,5 @@
+step,scale,citations,runs,state_sync_ms,review_preflight_ms,format_verify_ms,check_readonly_ms,total_ms,ledger_bytes,sources_bytes,offload_pct
+20,S,20,5,129.64,37.74,42.52,44.03,253.93,4069,29350,87.82
+50,M,50,10,127.54,44.91,39.47,50.34,262.25,10099,73470,87.92
+80,L,80,20,132.62,40.11,39.25,56.81,268.8,16129,117570,87.94
+120,XL,120,30,132.9,41.98,39.53,56.84,271.25,24169,176550,87.96

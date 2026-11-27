@@ -13,5 +13,4 @@ resources/templates/*/*.pdf
 .pytest_cache/
 __pycache__/
 dist/
-paper_workspace/
 .DS_Store

@@ -1,0 +1,61 @@
+{
+  "preflight_rc": 1,
+  "format_rc": 1,
+  "preflight_blockers": [
+    {
+      "category": "citation",
+      "issue": "Cited key 'miller2025unlistedsec' missing from literature/references.bib"
+    },
+    {
+      "category": "citation",
+      "issue": "Cited key 'miller2025unlistedsec' missing from literature/citation_ledger.json"
+    },
+    {
+      "category": "citation",
+      "issue": "Cited key 'wu2025secagent' is tagged unverified_needs_human_check"
+    },
+    {
+      "category": "evidence",
+      "issue": "02_results.md references experiments/dry_run/ path"
+    },
+    {
+      "category": "evidence",
+      "issue": "02_results.md reports decimal '97.6' under run 'exp_sec_s44' not matching experiments/runs/exp_sec_s44/metrics.json"
+    },
+    {
+      "category": "evidence",
+      "issue": "Referenced run_id 'exp_sec_s44_mock' has is_synthetic=true"
+    },
+    {
+      "category": "evidence",
+      "issue": "run_manifest.json for 'exp_sec_s44_mock' has is_synthetic=true"
+    },
+    {
+      "category": "evidence",
+      "issue": "experiments/runs/exp_sec_s44_mock/metrics.json has is_synthetic=true"
+    }
+  ],
+  "format_blockers": [
+    {
+      "category": "parity",
+      "issue": "01_intro.tex dropped citations: ['debenedetti2024agentdojo']"
+    },
+    {
+      "category": "anonymity",
+      "issue": "Local user path leak in 01_intro.tex"
+    }
+  ],
+  "detected": {
+    "M1": true,
+    "M2": true,
+    "M3": true,
+    "M4": true,
+    "M5": true,
+    "S1": false,
+    "S2": false,
+    "S3": false,
+    "S4": false,
+    "S5": false
+  },
+  "clean_fp": 0
+}

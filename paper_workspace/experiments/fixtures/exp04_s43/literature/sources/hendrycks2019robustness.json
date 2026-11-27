@@ -1,0 +1,6 @@
+{
+  "citekey": "hendrycks2019robustness",
+  "title": "Benchmarking Neural Network Robustness to Common Corruptions and Perturbations",
+  "abstract": "We introduce ImageNet-C and ImageNet-P covering 15 corruption types across 5 severity levels to evaluate vision classifier robustness.",
+  "year": 2019
+}

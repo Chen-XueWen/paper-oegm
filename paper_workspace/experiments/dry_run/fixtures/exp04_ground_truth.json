@@ -1,0 +1,125 @@
+{
+  "42": {
+    "seed": 42,
+    "domain": "ml_systems",
+    "workspace": "/Users/xwtan/Documents/paper-orchestra-agy-plugin/paper_workspace/experiments/dry_run/fixtures/exp04_s42",
+    "defects": {
+      "M1": {
+        "type": "mechanical",
+        "desc": "Missing citation chen2025phantomkv",
+        "keywords": [
+          "chen2025phantomkv"
+        ]
+      },
+      "M2": {
+        "type": "mechanical",
+        "desc": "Unverified citation xiao2024streaming",
+        "keywords": [
+          "xiao2024streaming",
+          "unverified"
+        ]
+      },
+      "M3": {
+        "type": "mechanical",
+        "desc": "Decimal mismatch 93.7 vs 88.4",
+        "keywords": [
+          "93.7",
+          "88.4"
+        ]
+      },
+      "M4": {
+        "type": "mechanical",
+        "desc": "Synthetic run exp_kv_s42_mock / dry_run leak",
+        "keywords": [
+          "exp_kv_s42_mock",
+          "is_synthetic",
+          "dry_run"
+        ]
+      },
+      "M5": {
+        "type": "mechanical",
+        "desc": "Double-blind leak /Users/maxmustermann/kv_project/runs",
+        "keywords": [
+          "/Users/maxmustermann/kv_project/runs",
+          "anonymity",
+          "github.com",
+          "/Users/",
+          "/home/"
+        ]
+      },
+      "S1": {
+        "type": "semantic",
+        "desc": "Citation distortion of zhang2023h2o",
+        "keywords": [
+          "zhang2023h2o",
+          "distort",
+          "contradict",
+          "opposite",
+          "inaccura",
+          "misrepres",
+          "false",
+          "claim"
+        ]
+      },
+      "S2": {
+        "type": "semantic",
+        "desc": "Integer falsification 16 vs 4",
+        "keywords": [
+          "16",
+          "4",
+          "num_benchmarks"
+        ]
+      },
+      "S3": {
+        "type": "semantic",
+        "desc": "Missing ablation / overclaim / prose deanonymization",
+        "keywords": [
+          "ablation",
+          "overclaim",
+          "generaliz",
+          "deanonym",
+          "Munich",
+          "ETH",
+          "Seattle",
+          "anonym"
+        ]
+      },
+      "S4": {
+        "type": "semantic",
+        "desc": "Undefined symbol \\gamma_{\\text{evict}} or acronym PKVE-M",
+        "keywords": [
+          "PKVE-M",
+          "evict",
+          "drift",
+          "cap",
+          "undefined",
+          "acronym",
+          "symbol",
+          "notation"
+        ]
+      },
+      "S5": {
+        "type": "semantic",
+        "desc": "Visual legibility flaws in fig_results.png",
+        "keywords": [
+          "overlap",
+          "tick",
+          "legend",
+          "tiny",
+          "small",
+          "font",
+          "red",
+          "green",
+          "unit",
+          "legib",
+          "fig_results"
+        ]
+      }
+    },
+    "clean_controls": {
+      "C1": "Accurate citation kwon2023vllm",
+      "C2": "Accurate metric 3.42",
+      "C3": "Defined parameter alpha_base"
+    }
+  }
+}

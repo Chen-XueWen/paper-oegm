@@ -1,0 +1,19 @@
+{
+  "citekey": "lv2026structuredaudit",
+  "source_type": "arxiv_atom_api",
+  "arxiv_id": "2604.25109",
+  "doi": null,
+  "primary_url": "https://arxiv.org/abs/2604.25109",
+  "published": "2026-04-28T01:32:27Z",
+  "authors": [
+    "Lijia Lv",
+    "Xuehai Tang",
+    "Jie Wen",
+    "Jizhong Han",
+    "Songlin Hu"
+  ],
+  "title": "Structured Security Auditing and Robustness Enhancement for Untrusted Agent Skills",
+  "comment": null,
+  "abstract": "Agent Skills package SKILL.md files, scripts, reference documents, and repository context into reusable capability units, turning pre-load auditing from single-prompt filtering into cross-file security review. Existing guardrails often flag risk but recover malicious intent inconsistently under semantics-preserving rewrites. This paper formulates pre-load auditing for untrusted Agent Skills as a robust three-way classification task and introduces SkillGuard-Robust, which combines role-aware evidence extraction, selective semantic verification, and consistency-preserving adjudication. We evaluate SkillGuard-Robust on SkillGuardBench and two public-ecosystem extensions through five large evaluation views ranging from 254 to 404 packages. On the 404-package held-out aggregate, SkillGuard-Robust reaches 97.30% overall exact match, 98.33% malicious-risk recall, and 98.89% attack exact consistency. On the 254-package external-ecosystem view, it reaches 99.66%, 100.00%, and 100.00%, respectively. These results support a bounded conclusion: factorized package auditing materially improves frozen and public-ecosystem robustness, while harsher external-source transfer remains an open challenge.",
+  "retrieved_at": "2026-11-27T13:57:04Z"
+}

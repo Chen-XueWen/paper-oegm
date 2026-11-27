@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "project_title": "Capability-Scoped Sandboxing for Tool-Using Coding Agents",
+  "venue": {
+    "name": "agentskills2027",
+    "template_year": 2027,
+    "submission_mode": "double-blind",
+    "page_limit_main": 9
+  },
+  "stages": {
+    "po-start": {
+      "status": "approved",
+      "outputs": [
+        "intake_manifest.md"
+      ],
+      "output_hashes": {
+        "intake_manifest.md": "sha256:6ad7d840c3d475318953329a967ec70f2bf9c7aecc3545020b4c2d159e7dc710"
+      }
+    }
+  }
+}

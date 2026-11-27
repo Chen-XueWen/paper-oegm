@@ -1,0 +1,13 @@
+schema_version: "1.0"
+sections:
+  - 01_abstract.md
+  - 02_introduction.md
+  - 03_related_work.md
+  - 04_method.md
+  - 05_experiments.md
+  - 06_limitations.md
+  - 07_conclusion.md
+authors:
+  - name: "Anonymous Author(s)"
+    affiliation: "Anonymous Institution"
+    email: "anonymous@example.edu"

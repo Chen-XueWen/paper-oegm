@@ -1,0 +1,19 @@
+{
+  "run_id": "exp03_scalability_s42",
+  "status": "completed",
+  "started_at": "2026-11-27T14:16:02Z",
+  "finished_at": "2026-11-27T14:16:04Z",
+  "exit_code": 0,
+  "is_synthetic": true,
+  "git_commit": "dba1564eb962b9f5bf54a3f7c58e52cde4d4db7d",
+  "git_dirty": false,
+  "cmd": "paper_workspace/experiments/run_exp03_scalability.sh --seed 42 --dry-run",
+  "seeds": [
+    42
+  ],
+  "hardware": {
+    "hostname_hash": "sha256:c7236099b35d86b7",
+    "gpu": "cpu",
+    "cpu_count": 14
+  }
+}

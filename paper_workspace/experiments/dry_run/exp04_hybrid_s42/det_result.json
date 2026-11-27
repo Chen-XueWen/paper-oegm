@@ -1,0 +1,65 @@
+{
+  "preflight_rc": 1,
+  "format_rc": 1,
+  "preflight_blockers": [
+    {
+      "category": "citation",
+      "issue": "Cited key 'chen2025phantomkv' missing from literature/references.bib"
+    },
+    {
+      "category": "citation",
+      "issue": "Cited key 'chen2025phantomkv' missing from literature/citation_ledger.json"
+    },
+    {
+      "category": "citation",
+      "issue": "Cited key 'xiao2024streaming' is tagged unverified_needs_human_check"
+    },
+    {
+      "category": "evidence",
+      "issue": "02_results.md references experiments/dry_run/ path"
+    },
+    {
+      "category": "evidence",
+      "issue": "02_results.md reports decimal '93.7' under run 'exp_kv_s42' not matching experiments/runs/exp_kv_s42/metrics.json"
+    },
+    {
+      "category": "evidence",
+      "issue": "Referenced run_id 'exp_kv_s42_mock' has is_synthetic=true"
+    },
+    {
+      "category": "evidence",
+      "issue": "run_manifest.json for 'exp_kv_s42_mock' has is_synthetic=true"
+    },
+    {
+      "category": "evidence",
+      "issue": "experiments/runs/exp_kv_s42_mock/metrics.json has is_synthetic=true"
+    }
+  ],
+  "format_blockers": [
+    {
+      "category": "parity",
+      "issue": "01_intro.tex dropped citations: ['zhang2023h2o']"
+    },
+    {
+      "category": "parity",
+      "issue": "01_intro.tex dropped decimal tokens: ['14.5']"
+    },
+    {
+      "category": "anonymity",
+      "issue": "Local user path leak in 01_intro.tex"
+    }
+  ],
+  "detected": {
+    "M1": true,
+    "M2": true,
+    "M3": true,
+    "M4": true,
+    "M5": true,
+    "S1": false,
+    "S2": false,
+    "S3": false,
+    "S4": false,
+    "S5": false
+  },
+  "clean_fp": 0
+}

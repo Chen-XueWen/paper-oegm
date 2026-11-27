@@ -1,0 +1,6 @@
+{
+  "citekey": "xiao2024streaming",
+  "title": "Efficient Streaming Language Models with Attention Sinks",
+  "abstract": "Keeping initial attention sink tokens enables infinite-length streaming generation without fine-tuning, achieving up to 22.2x speedup over sliding window recomputation.",
+  "year": 2024
+}

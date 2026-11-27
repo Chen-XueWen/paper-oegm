@@ -1,0 +1,16 @@
+{
+  "citekey": "badhe2026skillsecurity",
+  "source_type": "arxiv_atom_api",
+  "arxiv_id": "2607.13987",
+  "doi": null,
+  "primary_url": "https://arxiv.org/abs/2607.13987",
+  "published": "2026-07-15T16:15:46Z",
+  "authors": [
+    "Sanket Badhe",
+    "Priyanka Tiwari"
+  ],
+  "title": "Agent Skill Security: Threat Models, Attacks, Defenses, and Evaluation",
+  "comment": null,
+  "abstract": "Reusable skills are becoming a fundamental building block of Large Language Model (LLM) agents, enabling capabilities to be packaged, shared, and reused across diverse applications. However, existing security research primarily focuses on prompt injection and runtime execution, leaving security risks throughout the broader skill lifecycle largely unexplored. In this paper, we present SkillSec-Eval, a lifecycle-aware framework for systematically evaluating the security of reusable agent skills. We first characterize the skill lifecycle and develop a threat taxonomy spanning repository admission, semantic retrieval, planner selection, execution, and skill evolution. We then instantiate this taxonomy in SkillSec-Eval and conduct a comprehensive empirical evaluation using a repository of 327 real-world skills. Our study demonstrates that vulnerabilities arise at multiple lifecycle stages beyond execution, highlighting the need for lifecycle-aware security analysis of reusable agent skills.",
+  "retrieved_at": "2026-11-27T13:57:04Z"
+}

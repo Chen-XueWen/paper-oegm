@@ -1,0 +1,6 @@
+{
+  "citekey": "wu2025secagent",
+  "title": "Isolating Tool Permissions in Autonomous Software Agents",
+  "abstract": "Least-privilege capability wrappers block unauthorized file writes in 91.4% of tested shell-injection cases while adding 6.2 ms median wrapper latency.",
+  "year": 2025
+}

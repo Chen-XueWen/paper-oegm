@@ -1,0 +1,6 @@
+{
+  "citekey": "wang2021tent",
+  "title": "Tent: Fully Test-Time Adaptation by Entropy Minimization",
+  "abstract": "Tent adapts batch normalization affine parameters via entropy minimization at test time, reducing ImageNet-C error from 82.0% to 55.6% without accessing source training data.",
+  "year": 2021
+}

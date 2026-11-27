@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "project_title": "Calibration-Free Test-Time Adaptation Under Corrupted Video Streams",
+  "venue": {
+    "name": "agentskills2027",
+    "template_year": 2027,
+    "submission_mode": "double-blind",
+    "page_limit_main": 9
+  },
+  "stages": {
+    "po-start": {
+      "status": "approved",
+      "outputs": [
+        "intake_manifest.md"
+      ],
+      "output_hashes": {
+        "intake_manifest.md": "sha256:581deee5d30e07025f68c43140f30c72cc3f548a271c38ea6b19dcdf637ac440"
+      }
+    }
+  }
+}

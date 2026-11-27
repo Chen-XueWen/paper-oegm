@@ -1,0 +1,7 @@
+{
+  "run_id": "exp_sec_s44_mock",
+  "is_synthetic": true,
+  "metrics": {
+    "ablation_score": 81.5
+  }
+}

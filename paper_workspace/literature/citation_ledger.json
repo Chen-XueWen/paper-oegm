@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "entries": {
+    "yang2024sweagent": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/yang2024sweagent.json",
+      "primary_url": "https://arxiv.org/abs/2405.15793",
+      "doi": null,
+      "arxiv_id": "2405.15793",
+      "title_norm": "swe agent agent computer interfaces enable automated software engineering",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Language model (LM) agents are increasingly being used to automate complicated tasks in digital environments. Just as humans benefit from powerful software applications, such as integrated development environments, for complex tasks like software engineering, we posit that LM agents represent a new category of end user..."
+    },
+    "starace2025paperbench": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/starace2025paperbench.json",
+      "primary_url": "https://arxiv.org/abs/2504.01848",
+      "doi": null,
+      "arxiv_id": "2504.01848",
+      "title_norm": "paperbench evaluating ai s ability to replicate ai research",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "We introduce PaperBench, a benchmark evaluating the ability of AI agents to replicate state-of-the-art AI research. Agents must replicate 20 ICML 2024 Spotlight and Oral papers from scratch, including understanding paper contributions, developing a codebase, and successfully executing experiments."
+    },
+    "greshake2023indirect": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/greshake2023indirect.json",
+      "primary_url": "https://arxiv.org/abs/2302.12173",
+      "doi": null,
+      "arxiv_id": "2302.12173",
+      "title_norm": "not what you ve signed up for compromising real world llm integrated applications with indirect prompt injection",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Large Language Models (LLMs) are increasingly being integrated into various applications. The functionalities of recent LLMs can be flexibly modulated via natural language prompts."
+    },
+    "lu2024aiscientist": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/lu2024aiscientist.json",
+      "primary_url": "https://arxiv.org/abs/2408.06292",
+      "doi": null,
+      "arxiv_id": "2408.06292",
+      "title_norm": "the ai scientist towards fully automated open ended scientific discovery",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "One of the grand challenges of artificial general intelligence is developing agents capable of conducting scientific research and discovering new knowledge. While frontier models have already been used as aides to human scientists, e.g."
+    },
+    "schmotz2026skillinject": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/schmotz2026skillinject.json",
+      "primary_url": "https://arxiv.org/abs/2602.20156",
+      "doi": null,
+      "arxiv_id": "2602.20156",
+      "title_norm": "skill inject measuring agent vulnerability to skill file attacks",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "LLM agents are evolving rapidly, powered by code execution, tools, and the recently introduced agent skills feature. Skills allow users to extend LLM applications with specialized third-party code, knowledge, and instructions."
+    },
+    "xu2026agentskills": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/xu2026agentskills.json",
+      "primary_url": "https://arxiv.org/abs/2602.12430",
+      "doi": null,
+      "arxiv_id": "2602.12430",
+      "title_norm": "agent skills for large language models architecture acquisition security and the path forward",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "The transition from monolithic language models to modular, skill-equipped agents marks a defining shift in how large language models (LLMs) are deployed in practice. Rather than encoding all procedural knowledge within model weights, agent skills -- composable packages of instructions, code, and resources that agents l..."
+    },
+    "yamada2025aiscientistv2": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/yamada2025aiscientistv2.json",
+      "primary_url": "https://arxiv.org/abs/2504.08066",
+      "doi": null,
+      "arxiv_id": "2504.08066",
+      "title_norm": "the ai scientist v2 workshop level automated scientific discovery via agentic tree search",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "AI is increasingly playing a pivotal role in transforming how scientific discoveries are made. We introduce The AI Scientist-v2, an end-to-end agentic system capable of producing the first entirely AI generated peer-review-accepted workshop paper."
+    },
+    "wang2026skilltester": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/wang2026skilltester.json",
+      "primary_url": "https://arxiv.org/abs/2603.28815",
+      "doi": null,
+      "arxiv_id": "2603.28815",
+      "title_norm": "skilltester benchmarking utility and security of agent skills",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "This technical report presents SkillTester, a tool for evaluating the utility and security of agent skills. Its evaluation framework combines paired baseline and with-skill execution conditions with a separate security probe suite."
+    },
+    "song2026paperorchestra": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/song2026paperorchestra.json",
+      "primary_url": "https://arxiv.org/abs/2604.05018",
+      "doi": null,
+      "arxiv_id": "2604.05018",
+      "title_norm": "paperorchestra a multi agent framework for automated ai research paper writing",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Synthesizing unstructured research materials into manuscripts is an essential yet under-explored challenge in AI-driven scientific discovery. Existing autonomous writers are rigidly coupled to specific experimental pipelines, and produce superficial literature reviews."
+    },
+    "zhang2026reusable": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/zhang2026reusable.json",
+      "primary_url": "https://arxiv.org/abs/2608.08453",
+      "doi": null,
+      "arxiv_id": "2608.08453",
+      "title_norm": "what keeps agent skills from being reusable evidence from 138k skill md files",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Under the current standard, Agent Skills are SKILL.md files that combine instructions with supporting resources, enabling Large Language Model (LLM) agents to reuse procedures beyond a single conversation. Yet many public skills appear to originate from a single task, repository, or conversation, even when they are sha..."
+    },
+    "li2026skillsbench": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/li2026skillsbench.json",
+      "primary_url": "https://arxiv.org/abs/2602.12670",
+      "doi": null,
+      "arxiv_id": "2602.12670",
+      "title_norm": "skillsbench benchmarking how well agent skills work across diverse tasks",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Agent Skills are structured packages of procedural knowledge that augment large language model (LLM) agents at inference time. Despite rapid adoption, there is no standard way to measure whether they actually help."
+    },
+    "liang2024feedback": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/liang2024feedback.json",
+      "primary_url": "https://arxiv.org/abs/2310.01783",
+      "doi": null,
+      "arxiv_id": "2310.01783",
+      "title_norm": "can large language models provide useful feedback on research papers a large scale empirical analysis",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Expert feedback lays the foundation of rigorous research. However, the rapid growth of scholarly production and intricate knowledge specialization challenge the conventional scientific feedback mechanisms."
+    },
+    "weng2024cycleresearcher": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/weng2024cycleresearcher.json",
+      "primary_url": "https://arxiv.org/abs/2411.00816",
+      "doi": null,
+      "arxiv_id": "2411.00816",
+      "title_norm": "cycleresearcher improving automated research via automated review",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "The automation of scientific discovery has been a long-standing goal within the research community, driven by the potential to accelerate knowledge creation. While significant progress has been made using commercial large language models (LLMs) as research assistants or idea generators, the possibility of automating th..."
+    },
+    "huang2024selfcorrect": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/huang2024selfcorrect.json",
+      "primary_url": "https://arxiv.org/abs/2310.01798",
+      "doi": null,
+      "arxiv_id": "2310.01798",
+      "title_norm": "large language models cannot self correct reasoning yet",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content."
+    },
+    "destefanis2026gitskills": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/destefanis2026gitskills.json",
+      "primary_url": "https://arxiv.org/abs/2608.10906",
+      "doi": null,
+      "arxiv_id": "2608.10906",
+      "title_norm": "gitskills a dataset of agent skills on github",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "An agent skill is a folder containing a SKILL.md file with instructions for a language-model agent, optionally accompanied by scripts and reference files. The agent loads the skill when it judges that a task matches the skill description."
+    },
+    "zhu2026paperbanana": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/zhu2026paperbanana.json",
+      "primary_url": "https://arxiv.org/abs/2601.23265",
+      "doi": null,
+      "arxiv_id": "2601.23265",
+      "title_norm": "paperbanana automating academic illustration for ai scientists",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Despite rapid advances in autonomous AI scientists powered by language models, generating publication-ready illustrations remains a labor-intensive bottleneck in the research workflow. To lift this burden, we introduce PaperBanana, an agentic framework for automated generation of publication-ready academic illustration..."
+    },
+    "lv2026structuredaudit": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/lv2026structuredaudit.json",
+      "primary_url": "https://arxiv.org/abs/2604.25109",
+      "doi": null,
+      "arxiv_id": "2604.25109",
+      "title_norm": "structured security auditing and robustness enhancement for untrusted agent skills",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Agent Skills package SKILL.md files, scripts, reference documents, and repository context into reusable capability units, turning pre-load auditing from single-prompt filtering into cross-file security review. Existing guardrails often flag risk but recover malicious intent inconsistently under semantics-preserving rew..."
+    },
+    "saha2026underhood": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/saha2026underhood.json",
+      "primary_url": "https://arxiv.org/abs/2605.11418",
+      "doi": null,
+      "arxiv_id": "2605.11418",
+      "title_norm": "under the hood of skill md semantic supply chain attacks on ai agent skill registry",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Autonomous AI agents increasingly extend their capabilities through Agent Skills: modular filesystem packages whose SKILL.md files describe when and how agents should use them. While this design enables scalable, on-demand capability expansion, it also introduces a semantic supply-chain risk in which natural-language m..."
+    },
+    "badhe2026skillsecurity": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/badhe2026skillsecurity.json",
+      "primary_url": "https://arxiv.org/abs/2607.13987",
+      "doi": null,
+      "arxiv_id": "2607.13987",
+      "title_norm": "agent skill security threat models attacks defenses and evaluation",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Reusable skills are becoming a fundamental building block of Large Language Model (LLM) agents, enabling capabilities to be packaged, shared, and reused across diverse applications. However, existing security research primarily focuses on prompt injection and runtime execution, leaving security risks throughout the bro..."
+    },
+    "google2026egm": {
+      "verification_status": "verified_source",
+      "source_file": "literature/sources/google2026egm.json",
+      "primary_url": "https://github.com/google/elephant-goldfish-model",
+      "doi": null,
+      "arxiv_id": null,
+      "title_norm": "elephant goldfish model egm multi harness spec driven development and fresh context review plugin",
+      "retrieved_at": "2026-11-27T13:57:04Z",
+      "claim_summary": "Open-source multi-harness coding-agent plugin defining fresh-context Goldfish reviewer personas and deterministic runtime packaging across Antigravity, Claude Code, and Codex."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "citekey": "niu2023sar",
+  "title": "Towards Stable Test-Time Adaptation in Dynamic Wild World",
+  "abstract": "SAR removes noisy high-entropy samples and uses sharpness-aware minimization to prevent model collapse under mixed distribution shifts and small batch sizes down to 1.",
+  "year": 2023
+}

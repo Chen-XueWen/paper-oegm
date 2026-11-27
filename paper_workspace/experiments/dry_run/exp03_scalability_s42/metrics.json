@@ -1,0 +1,24 @@
+{
+  "run_id": "exp03_scalability_s42",
+  "is_synthetic": true,
+  "metrics": {
+    "max_scale_label": "M",
+    "xl_total_ms": 275.58,
+    "xl_state_sync_ms": 128.03,
+    "xl_review_preflight_ms": 51.5,
+    "xl_format_verify_ms": 47.03,
+    "xl_check_readonly_ms": 49.02,
+    "ledger_bytes_xl": 4069,
+    "sources_bytes_xl": 29350,
+    "context_offload_pct": 87.82,
+    "venues_tested": 1,
+    "venues_compiled_ok": 1,
+    "pdfinfo_leaks": 0,
+    "pdfinfo_generic_creator_tags": 1,
+    "compile_acmart_sigplan_ms": 1720.35,
+    "scale_s_total_ms": 297.05,
+    "scale_s_offload_pct": 87.68,
+    "scale_m_total_ms": 275.58,
+    "scale_m_offload_pct": 87.82
+  }
+}

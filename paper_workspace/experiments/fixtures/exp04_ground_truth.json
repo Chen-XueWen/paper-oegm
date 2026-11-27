@@ -1,0 +1,371 @@
+{
+  "42": {
+    "seed": 42,
+    "domain": "ml_systems",
+    "workspace": "/Users/xwtan/Documents/paper-orchestra-agy-plugin/paper_workspace/experiments/fixtures/exp04_s42",
+    "defects": {
+      "M1": {
+        "type": "mechanical",
+        "desc": "Missing citation chen2025phantomkv",
+        "keywords": [
+          "chen2025phantomkv"
+        ]
+      },
+      "M2": {
+        "type": "mechanical",
+        "desc": "Unverified citation xiao2024streaming",
+        "keywords": [
+          "xiao2024streaming",
+          "unverified"
+        ]
+      },
+      "M3": {
+        "type": "mechanical",
+        "desc": "Decimal mismatch 93.7 vs 88.4",
+        "keywords": [
+          "93.7",
+          "88.4"
+        ]
+      },
+      "M4": {
+        "type": "mechanical",
+        "desc": "Synthetic run exp_kv_s42_mock / dry_run leak",
+        "keywords": [
+          "exp_kv_s42_mock",
+          "is_synthetic",
+          "dry_run"
+        ]
+      },
+      "M5": {
+        "type": "mechanical",
+        "desc": "Double-blind leak /Users/maxmustermann/kv_project/runs",
+        "keywords": [
+          "/Users/maxmustermann/kv_project/runs",
+          "anonymity",
+          "github.com",
+          "/Users/",
+          "/home/"
+        ]
+      },
+      "S1": {
+        "type": "semantic",
+        "desc": "Citation distortion of zhang2023h2o",
+        "keywords": [
+          "zhang2023h2o",
+          "distort",
+          "contradict",
+          "opposite",
+          "inaccura",
+          "misrepres",
+          "false",
+          "claim"
+        ]
+      },
+      "S2": {
+        "type": "semantic",
+        "desc": "Integer falsification 16 vs 4",
+        "keywords": [
+          "16",
+          "4",
+          "num_benchmarks"
+        ]
+      },
+      "S3": {
+        "type": "semantic",
+        "desc": "Missing ablation / overclaim / prose deanonymization",
+        "keywords": [
+          "ablation",
+          "overclaim",
+          "generaliz",
+          "deanonym",
+          "Munich",
+          "ETH",
+          "Seattle",
+          "anonym"
+        ]
+      },
+      "S4": {
+        "type": "semantic",
+        "desc": "Undefined symbol \\gamma_{\\text{evict}} or acronym PKVE-M",
+        "keywords": [
+          "PKVE-M",
+          "evict",
+          "drift",
+          "cap",
+          "undefined",
+          "acronym",
+          "symbol",
+          "notation"
+        ]
+      },
+      "S5": {
+        "type": "semantic",
+        "desc": "Visual legibility flaws in fig_results.png",
+        "keywords": [
+          "overlap",
+          "tick",
+          "legend",
+          "tiny",
+          "small",
+          "font",
+          "red",
+          "green",
+          "unit",
+          "legib",
+          "fig_results"
+        ]
+      }
+    },
+    "clean_controls": {
+      "C1": "Accurate citation kwon2023vllm",
+      "C2": "Accurate metric 3.42",
+      "C3": "Defined parameter alpha_base"
+    }
+  },
+  "43": {
+    "seed": 43,
+    "domain": "vision_benchmarks",
+    "workspace": "/Users/xwtan/Documents/paper-orchestra-agy-plugin/paper_workspace/experiments/fixtures/exp04_s43",
+    "defects": {
+      "M1": {
+        "type": "mechanical",
+        "desc": "Missing citation patel2025ghosttta",
+        "keywords": [
+          "patel2025ghosttta"
+        ]
+      },
+      "M2": {
+        "type": "mechanical",
+        "desc": "Unverified citation hendrycks2019robustness",
+        "keywords": [
+          "hendrycks2019robustness",
+          "unverified"
+        ]
+      },
+      "M3": {
+        "type": "mechanical",
+        "desc": "Decimal mismatch 82.9 vs 76.2",
+        "keywords": [
+          "82.9",
+          "76.2"
+        ]
+      },
+      "M4": {
+        "type": "mechanical",
+        "desc": "Synthetic run exp_tta_s43_mock / dry_run leak",
+        "keywords": [
+          "exp_tta_s43_mock",
+          "is_synthetic",
+          "dry_run"
+        ]
+      },
+      "M5": {
+        "type": "mechanical",
+        "desc": "Double-blind leak https://github.com/eth-vision-private/cf-vtta-code",
+        "keywords": [
+          "https://github.com/eth-vision-private/cf-vtta-code",
+          "anonymity",
+          "github.com",
+          "/Users/",
+          "/home/"
+        ]
+      },
+      "S1": {
+        "type": "semantic",
+        "desc": "Citation distortion of wang2021tent",
+        "keywords": [
+          "wang2021tent",
+          "distort",
+          "contradict",
+          "opposite",
+          "inaccura",
+          "misrepres",
+          "false",
+          "claim"
+        ]
+      },
+      "S2": {
+        "type": "semantic",
+        "desc": "Integer falsification 15 vs 5",
+        "keywords": [
+          "15",
+          "5",
+          "num_corruptions_tested"
+        ]
+      },
+      "S3": {
+        "type": "semantic",
+        "desc": "Missing ablation / overclaim / prose deanonymization",
+        "keywords": [
+          "ablation",
+          "overclaim",
+          "generaliz",
+          "deanonym",
+          "Munich",
+          "ETH",
+          "Seattle",
+          "anonym"
+        ]
+      },
+      "S4": {
+        "type": "semantic",
+        "desc": "Undefined symbol \\tau_{\\text{drift}} or acronym CF-VTTA",
+        "keywords": [
+          "CF-VTTA",
+          "evict",
+          "drift",
+          "cap",
+          "undefined",
+          "acronym",
+          "symbol",
+          "notation"
+        ]
+      },
+      "S5": {
+        "type": "semantic",
+        "desc": "Visual legibility flaws in fig_results.png",
+        "keywords": [
+          "overlap",
+          "tick",
+          "legend",
+          "tiny",
+          "small",
+          "font",
+          "red",
+          "green",
+          "unit",
+          "legib",
+          "fig_results"
+        ]
+      }
+    },
+    "clean_controls": {
+      "C1": "Accurate citation wang2021tent",
+      "C2": "Accurate metric 61.8",
+      "C3": "Defined parameter alpha_base"
+    }
+  },
+  "44": {
+    "seed": 44,
+    "domain": "agent_security",
+    "workspace": "/Users/xwtan/Documents/paper-orchestra-agy-plugin/paper_workspace/experiments/fixtures/exp04_s44",
+    "defects": {
+      "M1": {
+        "type": "mechanical",
+        "desc": "Missing citation miller2025unlistedsec",
+        "keywords": [
+          "miller2025unlistedsec"
+        ]
+      },
+      "M2": {
+        "type": "mechanical",
+        "desc": "Unverified citation wu2025secagent",
+        "keywords": [
+          "wu2025secagent",
+          "unverified"
+        ]
+      },
+      "M3": {
+        "type": "mechanical",
+        "desc": "Decimal mismatch 97.6 vs 91.4",
+        "keywords": [
+          "97.6",
+          "91.4"
+        ]
+      },
+      "M4": {
+        "type": "mechanical",
+        "desc": "Synthetic run exp_sec_s44_mock / dry_run leak",
+        "keywords": [
+          "exp_sec_s44_mock",
+          "is_synthetic",
+          "dry_run"
+        ]
+      },
+      "M5": {
+        "type": "mechanical",
+        "desc": "Double-blind leak /home/jdoe/agent_sandbox_paper",
+        "keywords": [
+          "/home/jdoe/agent_sandbox_paper",
+          "anonymity",
+          "github.com",
+          "/Users/",
+          "/home/"
+        ]
+      },
+      "S1": {
+        "type": "semantic",
+        "desc": "Citation distortion of debenedetti2024agentdojo",
+        "keywords": [
+          "debenedetti2024agentdojo",
+          "distort",
+          "contradict",
+          "opposite",
+          "inaccura",
+          "misrepres",
+          "false",
+          "claim"
+        ]
+      },
+      "S2": {
+        "type": "semantic",
+        "desc": "Integer falsification 12 vs 3",
+        "keywords": [
+          "12",
+          "3",
+          "num_agent_harnesses"
+        ]
+      },
+      "S3": {
+        "type": "semantic",
+        "desc": "Missing ablation / overclaim / prose deanonymization",
+        "keywords": [
+          "ablation",
+          "overclaim",
+          "generaliz",
+          "deanonym",
+          "Munich",
+          "ETH",
+          "Seattle",
+          "anonym"
+        ]
+      },
+      "S4": {
+        "type": "semantic",
+        "desc": "Undefined symbol \\Omega_{\\text{cap}} or acronym CS-CAPG",
+        "keywords": [
+          "CS-CAPG",
+          "evict",
+          "drift",
+          "cap",
+          "undefined",
+          "acronym",
+          "symbol",
+          "notation"
+        ]
+      },
+      "S5": {
+        "type": "semantic",
+        "desc": "Visual legibility flaws in fig_results.png",
+        "keywords": [
+          "overlap",
+          "tick",
+          "legend",
+          "tiny",
+          "small",
+          "font",
+          "red",
+          "green",
+          "unit",
+          "legib",
+          "fig_results"
+        ]
+      }
+    },
+    "clean_controls": {
+      "C1": "Accurate citation greshake2023indirect",
+      "C2": "Accurate metric 6.2",
+      "C3": "Defined parameter alpha_base"
+    }
+  }
+}

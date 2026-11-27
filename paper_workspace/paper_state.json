@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "project_title": "PaperOEGM: Composable Zero-API-Key Agent Skills with Deterministic Provenance Verification and Fresh-Context Peer Review",
+  "venue": {
+    "name": "agentskills2027",
+    "template_source": "local_texlive:acmart[sigplan,review,anonymous]",
+    "template_year": 2026,
+    "submission_mode": "double-blind",
+    "page_limit_main": 9,
+    "citation_macro_style": "natbib"
+  },
+  "stages": {
+    "po-start": {
+      "status": "approved",
+      "outputs": [
+        "intake_manifest.md"
+      ],
+      "output_hashes": {
+        "intake_manifest.md": "sha256:8caff66f01450d60b3fe6790cd1cf859af872d00ed357b36aeb29dcfddcd7d46"
+      },
+      "updated_at": "2026-11-27T13:52:31Z"
+    },
+    "po-literature:early": {
+      "status": "approved",
+      "input_hashes": {
+        "intake_manifest.md": "sha256:8caff66f01450d60b3fe6790cd1cf859af872d00ed357b36aeb29dcfddcd7d46"
+      },
+      "outputs": [
+        "literature/references.bib",
+        "literature/citation_ledger.json",
+        "literature/literature_review.md"
+      ],
+      "output_hashes": {
+        "literature/references.bib": "sha256:6561eae19c8e4189ff90d8d4c3eb9ea36abdd8cfa860fb5a1c5c9e087b8eae59",
+        "literature/citation_ledger.json": "sha256:9f6590a3d498e2632bfc5fb5a7abe8d755fc2ff59bed253b2762009c73b78fdf",
+        "literature/literature_review.md": "sha256:786ec90ed79e4466957b559c9a283986c978c12b63d46799384e61e9df6914a9"
+      },
+      "updated_at": "2026-11-27T14:00:56Z"
+    },
+    "po-exp-design": {
+      "status": "approved",
+      "input_hashes": {
+        "intake_manifest.md": "sha256:8caff66f01450d60b3fe6790cd1cf859af872d00ed357b36aeb29dcfddcd7d46"
+      },
+      "outputs": [
+        "plan/experiment_design.md"
+      ],
+      "output_hashes": {
+        "plan/experiment_design.md": "sha256:405aef4d1b0339f8f1c6c1db3855eb61284b2e87b563188f5ed8b5ebdff4cd66"
+      },
+      "updated_at": "2026-11-27T14:07:33Z"
+    },
+    "po-exp-code": {
+      "status": "approved",
+      "input_hashes": {
+        "plan/experiment_design.md": "sha256:9c4a00c886c1d2ed621c2cb1fcb7024236b5ff2307d566418e2ce7b941b0d87c"
+      },
+      "outputs": [
+        "experiments/env.sh",
+        "experiments/check_env.sh",
+        "experiments/run_exp01_faultbench.sh",
+        "experiments/run_exp02_packaging.sh",
+        "experiments/run_exp03_scalability.sh",
+        "experiments/run_exp04_hybrid.sh"
+      ],
+      "output_hashes": {
+        "experiments/env.sh": "sha256:a783298a71530221ac8eca29e6c92b2fb3fbecfb8fa2efe26731adfee5205e57",
+        "experiments/check_env.sh": "sha256:ffa9629ff38d6c21b7ea86befa7673daa42821ef9dd30e17a2bb2f38b8e38d02",
+        "experiments/run_exp01_faultbench.sh": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/run_exp02_packaging.sh": "sha256:a4b16c5fc78635a7d09edcbb204c65a1818a33f7b0b82216040a4aad4216d86c",
+        "experiments/run_exp03_scalability.sh": "sha256:7219a79894912bdbef498bdd00b363d8fab827f34497e11ddfb5895a867f340b",
+        "experiments/run_exp04_hybrid.sh": "sha256:686d665698935938d8280aa27960d2dc7ad4801b9ec677ef9d63b00065fdcdef"
+      },
+      "updated_at": "2026-11-27T14:34:24Z"
+    },
+    "po-outline": {
+      "status": "approved",
+      "input_hashes": {
+        "experiments/provenance_index.json": "sha256:2e2e86d2ba1d80f638c4535e4cc2dadc1dd78b9d0b9f3fd251f5c5b75d3e8aed"
+      },
+      "outputs": [
+        "plan/outline.md"
+      ],
+      "output_hashes": {
+        "plan/outline.md": "sha256:9d05760b840c8c9d71d2d29071c2f01b4be6319a5267428cecff2467d3ea1da8"
+      },
+      "updated_at": "2026-11-27T14:25:20Z"
+    },
+    "po-literature:late": {
+      "status": "skipped",
+      "input_hashes": {
+        "plan/outline.md": "sha256:9d05760b840c8c9d71d2d29071c2f01b4be6319a5267428cecff2467d3ea1da8"
+      },
+      "updated_at": "2026-11-27T14:25:20Z"
+    },
+    "po-visuals": {
+      "status": "approved",
+      "input_hashes": {
+        "plan/outline.md": "sha256:9d05760b840c8c9d71d2d29071c2f01b4be6319a5267428cecff2467d3ea1da8",
+        "experiments/provenance_index.json": "sha256:2e2e86d2ba1d80f638c4535e4cc2dadc1dd78b9d0b9f3fd251f5c5b75d3e8aed"
+      },
+      "outputs": [
+        "visuals/manifest.md"
+      ],
+      "output_hashes": {
+        "visuals/manifest.md": "sha256:29113278b52ce2c4e830ee1e34298923c26d35cd785b52f5303cf82ed1cb70fe"
+      },
+      "updated_at": "2026-11-27T14:29:27Z"
+    },
+    "po-draft": {
+      "status": "approved",
+      "input_hashes": {
+        "plan/outline.md": "sha256:9d05760b840c8c9d71d2d29071c2f01b4be6319a5267428cecff2467d3ea1da8",
+        "literature/references.bib": "sha256:6561eae19c8e4189ff90d8d4c3eb9ea36abdd8cfa860fb5a1c5c9e087b8eae59",
+        "visuals/manifest.md": "sha256:29113278b52ce2c4e830ee1e34298923c26d35cd785b52f5303cf82ed1cb70fe"
+      },
+      "outputs": [
+        "manuscript/manuscript.yaml",
+        "manuscript/sections/01_abstract.md",
+        "manuscript/sections/02_introduction.md",
+        "manuscript/sections/03_related_work.md",
+        "manuscript/sections/04_method.md",
+        "manuscript/sections/05_experiments.md",
+        "manuscript/sections/06_limitations.md",
+        "manuscript/sections/07_conclusion.md"
+      ],
+      "output_hashes": {
+        "manuscript/manuscript.yaml": "sha256:d8341c04469fafcc2f8eaf5a9759327e0d9869497704ab142ffb80200ee35b45",
+        "manuscript/sections/01_abstract.md": "sha256:bfca2849aee2800ea52a02f1d704030a856e9e190e67376381538cd10ed48ab7",
+        "manuscript/sections/02_introduction.md": "sha256:f0471c331124ac3e0035fc9e15253fb3887259da531f7bfde5f8da7667c16fe6",
+        "manuscript/sections/03_related_work.md": "sha256:6b6f4c56476c9268b8a42d6f83f05f686bc58387744d449de736072230a407d3",
+        "manuscript/sections/04_method.md": "sha256:b60536a454e3743707ea2068d926763468349e05a88fed7f28af99b031ea969a",
+        "manuscript/sections/05_experiments.md": "sha256:b52448638e2600f534a80dff97bd8250eccca25ffdd8788e9f807db7bc220d38",
+        "manuscript/sections/06_limitations.md": "sha256:1b801cf57b8b3093dda6c76e866e1edfec8fed5eea83f5b56643d5b9f5357180",
+        "manuscript/sections/07_conclusion.md": "sha256:74353d7e68b81d9e68df7fd9e5fd46ba678dd6cde6b53ff938379b638686a836"
+      },
+      "updated_at": "2026-11-27T14:35:10Z"
+    }
+  },
+  "environment": {
+    "hash_tool": "python3",
+    "pandoc": "available",
+    "tex_compiler": "latexmk",
+    "bibtex_tool": "bibtex",
+    "pdf_rasterizer": "pdftoppm",
+    "python_plotting": "available"
+  }
+}

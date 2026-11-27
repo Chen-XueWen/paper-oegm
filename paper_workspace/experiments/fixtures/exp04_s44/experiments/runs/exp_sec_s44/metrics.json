@@ -1,0 +1,9 @@
+{
+  "run_id": "exp_sec_s44",
+  "is_synthetic": false,
+  "metrics": {
+    "primary_score": 91.4,
+    "secondary_metric": 6.2,
+    "num_agent_harnesses": 3
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "project_title": "Adaptive KV-Cache Eviction for Long-Context Serving",
+  "venue": {
+    "name": "agentskills2027",
+    "template_year": 2027,
+    "submission_mode": "double-blind",
+    "page_limit_main": 9
+  },
+  "stages": {
+    "po-start": {
+      "status": "approved",
+      "outputs": [
+        "intake_manifest.md"
+      ],
+      "output_hashes": {
+        "intake_manifest.md": "sha256:808c5a882000dac94b9e9b6d6c8734ae584daff7f9c51202de992fe2f293e66c"
+      }
+    }
+  }
+}

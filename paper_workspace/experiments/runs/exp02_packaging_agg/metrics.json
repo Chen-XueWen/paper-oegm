@@ -1,0 +1,252 @@
+{
+  "run_id": "exp02_packaging_agg",
+  "is_synthetic": false,
+  "source_runs": [
+    "exp02_packaging_s42",
+    "exp02_packaging_s43",
+    "exp02_packaging_s44",
+    "exp02_packaging_s45",
+    "exp02_packaging_s46"
+  ],
+  "metrics": {
+    "skill_count": {
+      "mean": 10.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "agent_count": {
+      "mean": 5.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "min_skill_bytes": {
+      "mean": 3466.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "median_skill_bytes": {
+      "mean": 3900.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "max_skill_bytes": {
+      "mean": 4526.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "max_skill_lines": {
+      "mean": 63.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "max_agent_bytes": {
+      "mean": 2376.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "frontmatter_index_bytes": {
+      "mean": 2270.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "median_active_stage_bytes": {
+      "mean": 14171.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "max_active_stage_bytes": {
+      "mean": 15749.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "monolithic_bytes": {
+      "mean": 79454.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "skill_only_reduction_pct": {
+      "mean": 95.09,
+      "std": 0.0,
+      "n": 5
+    },
+    "context_reduction_pct": {
+      "mean": 82.16,
+      "std": 0.0,
+      "n": 5
+    },
+    "startup_index_reduction_pct": {
+      "mean": 97.14,
+      "std": 0.0,
+      "n": 5
+    },
+    "headroom_vs_12kb_pct": {
+      "mean": 62.28,
+      "std": 0.0,
+      "n": 5
+    },
+    "headroom_vs_24kb_pct": {
+      "mean": 81.14,
+      "std": 0.0,
+      "n": 5
+    },
+    "egm_skill_count": {
+      "mean": 7.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "egm_median_skill_bytes": {
+      "mean": 15205.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "egm_max_skill_bytes": {
+      "mean": 24257.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "egm_max_agent_bytes": {
+      "mean": 7355.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "defect_count": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "repro_pass_rate": {
+      "mean": 100.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "pack_latency_ms": {
+      "mean": 143.0,
+      "std": 10.09,
+      "n": 5
+    },
+    "zip_antigravity_kb": {
+      "mean": 124.88,
+      "std": 0.0,
+      "n": 5
+    },
+    "zip_claude_kb": {
+      "mean": 142.37,
+      "std": 0.0,
+      "n": 5
+    },
+    "zip_openai_kb": {
+      "mean": 125.75,
+      "std": 0.0,
+      "n": 5
+    },
+    "claude_validate_ok": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "per_skill_bytes": {
+      "po-draft": {
+        "mean": 3699.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-exp-code": {
+        "mean": 3821.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-exp-design": {
+        "mean": 3466.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-format": {
+        "mean": 4526.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-literature": {
+        "mean": 3948.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-outline": {
+        "mean": 3867.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-resolve": {
+        "mean": 3999.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-review": {
+        "mean": 4448.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-start": {
+        "mean": 3933.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-visuals": {
+        "mean": 3850.0,
+        "std": 0.0,
+        "n": 5
+      }
+    },
+    "per_stage_active_bytes": {
+      "po-draft": {
+        "mean": 12805.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-exp-code": {
+        "mean": 13888.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-exp-design": {
+        "mean": 14454.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-format": {
+        "mean": 15749.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-literature": {
+        "mean": 13035.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-outline": {
+        "mean": 14855.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-resolve": {
+        "mean": 13105.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-review": {
+        "mean": 15436.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-start": {
+        "mean": 14921.0,
+        "std": 0.0,
+        "n": 5
+      },
+      "po-visuals": {
+        "mean": 13644.0,
+        "std": 0.0,
+        "n": 5
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Resolve Reviews"
+  short_description: "Triage peer-review findings in batches and apply safe edits"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

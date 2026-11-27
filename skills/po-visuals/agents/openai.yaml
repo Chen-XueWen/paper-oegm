@@ -1,0 +1,6 @@
+interface:
+  display_name: "Paper Visuals"
+  short_description: "Render reproducible data plots and vector paper diagrams"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

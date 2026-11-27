@@ -1,0 +1,32 @@
+{
+  "name": "paper-oegm",
+  "displayName": "PaperOEGM",
+  "version": "0.1.0",
+  "description": "Modular zero-API-key research-to-paper workflow with provenance checks and fresh-context peer review.",
+  "author": {
+    "name": "Chen-XueWen"
+  },
+  "homepage": "https://github.com/Chen-XueWen/paper-oegm",
+  "repository": "https://github.com/Chen-XueWen/paper-oegm",
+  "license": "Apache-2.0",
+  "keywords": [
+    "research",
+    "academic-paper",
+    "latex",
+    "peer-review",
+    "experiments",
+    "workflow"
+  ],
+  "documentationUrl": "https://github.com/Chen-XueWen/paper-oegm/blob/main/docs/claude.md",
+  "supportUrl": "https://github.com/Chen-XueWen/paper-oegm/issues",
+  "privacyPolicyUrl": "https://github.com/Chen-XueWen/paper-oegm/blob/main/docs/privacy.md",
+  "termsOfServiceUrl": "https://github.com/Chen-XueWen/paper-oegm/blob/main/LICENSE",
+  "icon": "./.claude-plugin/icon.png",
+  "agents": [
+    "./.claude-plugin/agents/po-peer-reviewer.md",
+    "./.claude-plugin/agents/po-evidence-auditor.md",
+    "./.claude-plugin/agents/po-citation-auditor.md",
+    "./.claude-plugin/agents/po-visual-format-critic.md",
+    "./.claude-plugin/agents/po-clarity-reader.md"
+  ]
+}

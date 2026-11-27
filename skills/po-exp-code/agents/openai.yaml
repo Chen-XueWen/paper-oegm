@@ -1,0 +1,6 @@
+interface:
+  display_name: "Experiment Code"
+  short_description: "Generate safe runnable experiment scripts and metric logs"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

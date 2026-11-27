@@ -1,0 +1,6 @@
+interface:
+  display_name: "Literature Review"
+  short_description: "Search prior work and build a verified citation ledger"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

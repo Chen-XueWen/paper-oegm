@@ -1,0 +1,6 @@
+interface:
+  display_name: "Peer Review"
+  short_description: "Run pre-checks and parallel fresh-context read-only critics"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#e86e00"

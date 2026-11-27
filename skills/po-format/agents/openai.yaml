@@ -1,0 +1,6 @@
+interface:
+  display_name: "Format & Build"
+  short_description: "Convert Markdown to venue LaTeX, compile PDF, audit layout"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#e86e00"

@@ -1,0 +1,19 @@
+{
+  "name": "paper-oegm",
+  "owner": {
+    "name": "Chen-XueWen"
+  },
+  "plugins": [
+    {
+      "name": "paper-oegm",
+      "source": "./",
+      "description": "Modular zero-API-key research-to-paper workflow with provenance checks and fresh-context peer review.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chen-XueWen"
+      },
+      "license": "Apache-2.0",
+      "repository": "https://github.com/Chen-XueWen/paper-oegm"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Experiment Design"
+  short_description: "Plan research questions, baselines, ablations, and metrics"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

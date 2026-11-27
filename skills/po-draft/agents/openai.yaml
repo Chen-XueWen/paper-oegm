@@ -1,0 +1,6 @@
+interface:
+  display_name: "Manuscript Draft"
+  short_description: "Draft per-section LaTeX-friendly Markdown with provenance"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

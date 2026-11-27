@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 640" width="1120" height="640" role="img">
+  <title>PaperOEGM End-to-End 10-Skill Research-to-Paper Architecture</title>
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1b6ef3"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#e86e00"/>
+    </marker>
+    <marker id="arrowSlate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas -->
+  <rect x="2" y="2" width="1116" height="636" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Header -->
+  <text x="34" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#0f172a">PaperOEGM Workflow Architecture</text>
+  <text x="34" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#475569">Human-checkpointed stages · Disk-backed state (paper_state.json + po_tools.py) · Flat 1-level parallel read-only critics</text>
+
+  <!-- Legend (top right, colorblind-safe blue vs. orange + dual shape cues) -->
+  <g transform="translate(646, 24)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#1b6ef3"/>
+    <text x="22" y="13" fill="#1e293b">Authoring / Experiment Skill</text>
+    <rect x="200" y="0" width="16" height="16" rx="8" fill="#e86e00"/>
+    <text x="222" y="13" fill="#1e293b">Audit / Build Gate</text>
+    <rect x="342" y="0" width="16" height="16" rx="3" fill="#e2e8f0" stroke="#475569" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="364" y="13" fill="#1e293b">Artifact / Helper</text>
+  </g>
+
+  <!-- LANE 1: Intake & Experiments -->
+  <rect x="26" y="84" width="1068" height="148" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="42" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.6" fill="#1b6ef3">PHASE 1 · INTAKE, LITERATURE SURVEY &amp; PROVENANCE-LOGGED EXPERIMENTS</text>
+
+  <!-- Node: po-start -->
+  <rect x="44" y="122" width="168" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="128" y="147" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#1e40af">po-start</text>
+  <text x="128" y="168" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Workspace Router</text>
+  <text x="128" y="186" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Secret filter · Tool probe</text>
+  <text x="128" y="201" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">BYO &amp; Run intake</text>
+
+  <!-- Node: po-literature:early -->
+  <rect x="254" y="122" width="174" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="341" y="147" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1e40af">po-literature</text>
+  <text x="341" y="166" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" font-weight="600" fill="#1d4ed8">Early Survey (4a)</text>
+  <text x="341" y="185" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Baselines &amp; datasets</text>
+  <text x="341" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">literature/sources/</text>
+
+  <!-- Node: po-exp-design -->
+  <rect x="470" y="122" width="174" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="557" y="147" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1e40af">po-exp-design</text>
+  <text x="557" y="167" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Experiment Plan</text>
+  <text x="557" y="185" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">RQs · Baselines · Seeds</text>
+  <text x="557" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">plan/experiment_design.md</text>
+
+  <!-- Node: po-exp-code -->
+  <rect x="686" y="122" width="184" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="778" y="147" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1e40af">po-exp-code</text>
+  <text x="778" y="167" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Code &amp; Bash Runners</text>
+  <text x="778" y="185" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">set -euo · trap EXIT</text>
+  <text x="778" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">--dry-run isolated (&lt;60s)</text>
+
+  <!-- Box: Async GPU / BYO Artifact -->
+  <rect x="910" y="122" width="166" height="90" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <text x="993" y="146" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Async GPU / BYO</text>
+  <text x="993" y="166" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#334155">metrics.json (&lt;10KB)</text>
+  <text x="993" y="183" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#334155">run_manifest.json</text>
+  <text x="993" y="200" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#334155">provenance_index.json</text>
+
+  <!-- Lane 1 Arrows -->
+  <line x1="212" y1="167" x2="252" y2="167" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="428" y1="167" x2="468" y2="167" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="644" y1="167" x2="684" y2="167" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="870" y1="167" x2="908" y2="167" stroke="#475569" stroke-width="2" marker-end="url(#arrowSlate)"/>
+
+  <!-- LANE 2: Outline, Related Work, Visuals & Drafting -->
+  <rect x="26" y="260" width="1068" height="148" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <!-- Placed clearly to the right of incoming arrows at x=284 so zero arrows intersect text -->
+  <text x="284" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.6" fill="#1b6ef3">PHASE 2 · EVIDENCE MAPPING, VERIFIED CITATIONS, CODE VISUALS &amp; MARKDOWN DRAFTING</text>
+
+  <!-- Node: po-outline -->
+  <rect x="44" y="298" width="192" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="140" y="323" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#1e40af">po-outline</text>
+  <text x="140" y="343" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Evidence &amp; Page Map</text>
+  <text x="140" y="361" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Claim -&gt; canonical run_id</text>
+  <text x="140" y="376" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Supports direct BYO entry</text>
+
+  <!-- Node: po-literature:late -->
+  <rect x="284" y="298" width="212" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="390" y="323" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1e40af">po-literature (4b)</text>
+  <text x="390" y="343" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Verified Related Work</text>
+  <text x="390" y="361" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">DOI/arXiv/title dedup</text>
+  <text x="390" y="376" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">references.bib + ledger</text>
+
+  <!-- Node: po-visuals -->
+  <rect x="544" y="298" width="236" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="662" y="323" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#1e40af">po-visuals</text>
+  <text x="662" y="343" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Reproducible Plots &amp; Diagrams</text>
+  <text x="662" y="361" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Scripts reading metrics.json</text>
+  <text x="662" y="376" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">PDF/PNG export · VISUAL_AUDIT</text>
+
+  <!-- Node: po-draft -->
+  <rect x="828" y="298" width="248" height="90" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="952" y="323" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#1e40af">po-draft</text>
+  <text x="952" y="343" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Per-Section Markdown</text>
+  <text x="952" y="361" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.8" fill="#475569">manuscript/sections/*.md</text>
+  <text x="952" y="376" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.8" fill="#475569">&lt;!-- run:id --&gt; + manuscript.yaml</text>
+
+  <!-- Cross-lane connector: Phase 1 -> po-outline (routed cleanly in inter-lane gutter) -->
+  <path d="M 993 212 L 993 246 L 172 246 L 172 296" fill="none" stroke="#475569" stroke-width="1.9" marker-end="url(#arrowSlate)"/>
+  <!-- BYO shortcut from po-start -> po-outline -->
+  <path d="M 88 212 L 88 296" fill="none" stroke="#1b6ef3" stroke-width="1.7" stroke-dasharray="4 3" marker-end="url(#arrowBlue)"/>
+  <rect x="94" y="237" width="66" height="17" rx="4" fill="#eff6ff"/>
+  <text x="127" y="249" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#1d4ed8">BYO Entry</text>
+
+  <!-- Lane 2 Arrows -->
+  <line x1="236" y1="343" x2="282" y2="343" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="496" y1="343" x2="542" y2="343" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="780" y1="343" x2="826" y2="343" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- LANE 3: Fresh-Context Review, Resolution & Venue Build -->
+  <rect x="26" y="436" width="1068" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <!-- Placed clearly to the right of incoming arrow at x=292 -->
+  <text x="292" y="458" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.6" fill="#e86e00">PHASE 3 · FRESH-CONTEXT PEER REVIEW, BATCHED RESOLUTION &amp; VENUE LATEX BUILD</text>
+
+  <!-- Node: po-review -->
+  <rect x="44" y="474" width="212" height="102" rx="14" fill="#fff7ed" stroke="#e86e00" stroke-width="2.2"/>
+  <text x="150" y="498" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#c2410c">po-review</text>
+  <text x="150" y="517" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Pre-Check + Flat Dispatch</text>
+  <text x="150" y="534" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.8" fill="#475569">po_tools.py review-preflight</text>
+  <text x="150" y="551" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">4-state Reviewer Status</text>
+  <text x="150" y="566" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#9a3412">Fail-closed isolation gate</text>
+
+  <!-- 5 Read-Only Critics Stack -->
+  <rect x="292" y="474" width="234" height="102" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <text x="409" y="493" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" font-weight="700" fill="#92400e">5 Read-Only Critics (&lt;=1500 tok each)</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#1e293b">
+    <text x="306" y="512">1. po-peer-reviewer</text>
+    <text x="306" y="527">2. po-evidence-auditor</text>
+    <text x="306" y="542">3. po-citation-auditor (offline)</text>
+    <text x="306" y="557">4. po-visual-format-critic</text>
+    <text x="306" y="571">5. po-clarity-reader</text>
+  </g>
+
+  <!-- Node: po-resolve -->
+  <rect x="564" y="474" width="212" height="102" rx="10" fill="#eff6ff" stroke="#1b6ef3" stroke-width="2"/>
+  <text x="670" y="498" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#1e40af">po-resolve</text>
+  <text x="670" y="517" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Batched Human Triage</text>
+  <text x="670" y="534" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Snapshots + targeted diffs</text>
+  <text x="670" y="550" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">Settled log · Max-2 churn cap</text>
+  <text x="670" y="566" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#1d4ed8">Back-edges to Code/Vis/Lit</text>
+
+  <!-- Node: po-format -->
+  <rect x="814" y="474" width="262" height="102" rx="14" fill="#fff7ed" stroke="#e86e00" stroke-width="2.2"/>
+  <text x="945" y="498" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#c2410c">po-format</text>
+  <text x="945" y="517" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#334155">Venue LaTeX, Build &amp; Layout Audit</text>
+  <text x="945" y="534" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#475569">pandoc -&gt; sections/*.tex + parity</text>
+  <text x="945" y="550" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#475569">openin/out_any=p · Overleaf fallback</text>
+  <text x="945" y="566" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#9a3412">Post-compile PDF visual audit</text>
+
+  <!-- Cross-lane connector: po-draft -> po-review (routed cleanly in inter-lane gutter) -->
+  <path d="M 952 388 L 952 422 L 150 422 L 150 472" fill="none" stroke="#e86e00" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Lane 3 Arrows -->
+  <line x1="256" y1="525" x2="290" y2="525" stroke="#e86e00" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <line x1="526" y1="525" x2="562" y2="525" stroke="#e86e00" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <line x1="776" y1="525" x2="812" y2="525" stroke="#1b6ef3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Footer bar -->
+  <rect x="26" y="602" width="1068" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="560" y="619" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334155">State &amp; Verification Backbone: paper_state.json + STATUS.md + resources/scripts/po_tools.py (Python 3.10+ stdlib, zero pip install, manual fallbacks)</text>
+</svg>

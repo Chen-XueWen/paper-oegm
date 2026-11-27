@@ -1,0 +1,6 @@
+interface:
+  display_name: "PaperOEGM Start"
+  short_description: "Scan workspace, probe tools, and route to next paper stage"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1b6ef3"

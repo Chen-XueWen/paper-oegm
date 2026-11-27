@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="960" height="220" role="img">
+  <title>PaperOEGM — Modular Zero-API-Key Research-to-Paper Plugin</title>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="accentBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b6ef3"/>
+      <stop offset="70%" stop-color="#7cacf8"/>
+      <stop offset="100%" stop-color="#e86e00"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="956" height="216" rx="18" fill="url(#bgGrad)" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="2" y="2" width="956" height="8" rx="4" fill="url(#accentBar)"/>
+
+  <!-- Emblem -->
+  <g transform="translate(46, 54)">
+    <rect x="0" y="0" width="112" height="112" rx="26" fill="#1b6ef3"/>
+    <path fill="#ffffff" d="M28 22h34l18 18v48a5 5 0 0 1-5 5H28a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5z"/>
+    <path fill="#7cacf8" d="M62 22v18h18L62 22z"/>
+    <rect x="33" y="48" width="28" height="5.5" rx="2.75" fill="#1b6ef3"/>
+    <rect x="33" y="59" width="36" height="5.5" rx="2.75" fill="#7cacf8"/>
+    <rect x="33" y="70" width="22" height="5.5" rx="2.75" fill="#7cacf8"/>
+    <circle cx="80" cy="80" r="18" fill="#e86e00" stroke="#ffffff" stroke-width="4.5"/>
+    <path fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" d="M72.5 80.2l5 5 10-10"/>
+  </g>
+
+  <!-- Title & Version Badge -->
+  <text x="190" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="#0f172a">PaperOEGM</text>
+  <rect x="454" y="68" width="176" height="30" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="542" y="88" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14.5" font-weight="700" fill="#1b6ef3">paper-oegm v0.1.0</text>
+
+  <!-- Subtitle (sized cleanly within right margin) -->
+  <text x="190" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#334155">Modular zero-API-key research-to-paper plugin with provenance checks &amp; fresh-context review</text>
+
+  <!-- Capability Pills -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">
+    <rect x="190" y="156" width="144" height="30" rx="15" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+    <text x="262" y="176" text-anchor="middle" fill="#1e40af">10 Modular Skills</text>
+
+    <rect x="346" y="156" width="160" height="30" rx="15" fill="#ffedd5" stroke="#fdba74" stroke-width="1"/>
+    <text x="426" y="176" text-anchor="middle" fill="#9a3412">5 Read-Only Critics</text>
+
+    <rect x="518" y="156" width="248" height="30" rx="15" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="642" y="176" text-anchor="middle" fill="#1e293b">Antigravity · Claude Code · Codex</text>
+
+    <rect x="778" y="156" width="136" height="30" rx="15" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1"/>
+    <text x="846" y="176" text-anchor="middle" fill="#075985">Zero API Keys</text>
+  </g>
+</svg>

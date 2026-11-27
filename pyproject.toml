@@ -1,0 +1,17 @@
+[project]
+name = "paper-oegm"
+version = "0.1.0"
+description = "Modular zero-API-key research-to-paper coding-agent plugin (dev test configuration only; end users need zero pip install)."
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Chen-XueWen" }]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pyyaml>=6.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

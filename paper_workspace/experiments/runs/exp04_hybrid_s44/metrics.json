@@ -4,6 +4,7 @@
   "metrics": {
     "seed": 44,
     "domain": "agent_security",
+    "b4_latency_ms": 91.45,
     "det_mech_recall": 100.0,
     "det_sem_recall": 0.0,
     "det_total_recall": 50.0,

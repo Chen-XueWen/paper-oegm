@@ -2,7 +2,7 @@
 """Generate Figure 3: Skill Packaging Footprint & Context Load Comparison.
 
 Reads strictly from canonical non-synthetic experiments/runs/exp02_packaging_agg/metrics.json.
-Zero hardcoded result arrays.
+Pass 2 polish: exterior legend above Panel (a), +257 B EGM callout, symmetric Active (Max) % reduction.
 """
 
 from __future__ import annotations
@@ -32,11 +32,13 @@ def main() -> int:
 
     egm_med_kb = float(m["egm_median_skill_bytes"]["mean"]) / 1000.0
     egm_max_kb = float(m["egm_max_skill_bytes"]["mean"]) / 1000.0
+    egm_over_b = int(round(float(m["egm_max_skill_bytes"]["mean"]) - 24000.0))
     mono_kb = float(m["monolithic_bytes"]["mean"]) / 1000.0
     act_max_kb = float(m["max_active_stage_bytes"]["mean"]) / 1000.0
     act_med_kb = float(m["median_active_stage_bytes"]["mean"]) / 1000.0
     start_kb = float(m["frontmatter_index_bytes"]["mean"]) / 1000.0
     ctx_red = float(m["context_reduction_pct"]["mean"])
+    act_max_red = (1.0 - act_max_kb / mono_kb) * 100.0
     start_red = float(m["startup_index_reduction_pct"]["mean"])
 
     plt.rcParams.update({
@@ -46,29 +48,39 @@ def main() -> int:
         "ps.fonttype": 42,
     })
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.1, 2.85), dpi=300, gridspec_kw={"width_ratios": [1.35, 1.0]})
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.1, 3.15), dpi=300, gridspec_kw={"width_ratios": [1.35, 1.0]})
 
     # Panel (a): Individual PaperOEGM SKILL.md sizes vs budgets & EGM reference
     y = np.arange(len(s_names))
     ax1.barh(y, s_vals, height=0.62, color="#0072B2", edgecolor="#003E63", linewidth=0.6, zorder=3)
     for yi, val in zip(y, s_vals):
-        ax1.text(val + 0.35, yi, f"{val:.2f}", va="center", ha="left", fontsize=7.0, color="#1F2937")
+        ax1.text(val + 0.35, yi, f"{val:.2f}", va="center", ha="left", fontsize=7.2, color="#1F2937")
 
-    ax1.axvline(12.0, color="#009E73", linestyle="--", linewidth=1.2, label="PaperOEGM Budget (12.0 KB)", zorder=4)
-    ax1.axvline(egm_med_kb, color="#E69F00", linestyle="-.", linewidth=1.2, label=f"EGM Median ({egm_med_kb:.1f} KB)", zorder=4)
-    ax1.axvline(24.0, color="#D55E00", linestyle=":", linewidth=1.4, label="Antigravity Ceiling (24.0 KB)", zorder=4)
-    ax1.axvline(egm_max_kb, color="#CC79A7", linestyle="-", linewidth=1.1, label=f"EGM Max ({egm_max_kb:.1f} KB)", zorder=4)
+    ax1.axvline(12.0, color="#009E73", linestyle="--", linewidth=1.25, label="Budget (12.0 KB)", zorder=4)
+    ax1.axvline(egm_med_kb, color="#E69F00", linestyle="-.", linewidth=1.25, label=f"EGM Med ({egm_med_kb:.1f} KB)", zorder=4)
+    ax1.axvline(24.0, color="#D55E00", linestyle=":", linewidth=1.45, label="Host Limit (24.0 KB)", zorder=4)
+    ax1.axvline(egm_max_kb, color="#CC79A7", linestyle="-", linewidth=1.15, label=f"EGM Max ({egm_max_kb:.1f} KB)", zorder=4)
+
+    # Clear callout distinguishing 24.0 KB ceiling vs 24.3 KB EGM max
+    ax1.annotate(
+        f"EGM Max\n(+{egm_over_b} B over limit)",
+        xy=(egm_max_kb, 4.5), xytext=(16.1, 6.6),
+        fontsize=6.9, fontweight="bold", color="#86198F",
+        bbox=dict(boxstyle="round,pad=0.2", facecolor="#FDF4FF", edgecolor="#CC79A7", lw=0.7),
+        arrowprops=dict(arrowstyle="->", color="#86198F", lw=0.95, connectionstyle="arc3,rad=0.15"),
+        zorder=5,
+    )
 
     ax1.set_yticks(y)
     ax1.set_yticklabels(s_names, fontsize=7.6)
     ax1.invert_yaxis()
     ax1.set_xlim(0, 27.5)
-    ax1.set_xlabel("Whole-File SKILL.md Size (KB)", fontsize=8.2, fontweight="bold")
-    ax1.set_title("(a) Per-Skill Footprint vs. Limits", fontsize=8.5, fontweight="bold", pad=6)
+    ax1.set_xlabel("Whole-File SKILL.md Size (KB, 1,000 B)", fontsize=8.2, fontweight="bold")
+    ax1.set_title("(a) Per-Skill Footprint vs. Limits", fontsize=8.5, fontweight="bold", pad=28)
     ax1.grid(axis="x", linestyle="--", alpha=0.35, zorder=0)
     ax1.spines["top"].set_visible(False)
     ax1.spines["right"].set_visible(False)
-    ax1.legend(loc="lower right", fontsize=6.6, frameon=True, facecolor="#FFFFFF", edgecolor="#D1D5DB")
+    ax1.legend(loc="lower center", bbox_to_anchor=(0.48, 1.01), ncol=2, frameon=False, fontsize=7.1, columnspacing=1.0)
 
     # Panel (b): Context Load Comparison
     cats = ["Monolithic\n(B2)", "Active\n(Max)", "Active\n(Median)", "Startup\nIndex"]
@@ -81,15 +93,20 @@ def main() -> int:
         if ht:
             b.set_hatch(ht)
 
-    annots = [f"{mono_kb:.1f} KB", f"{act_max_kb:.1f} KB", f"{act_med_kb:.1f} KB\n(-{ctx_red:.1f}%)", f"{start_kb:.1f} KB\n(-{start_red:.1f}%)"]
+    annots = [
+        f"{mono_kb:.1f} KB",
+        f"{act_max_kb:.1f} KB\n(-{act_max_red:.1f}%)",
+        f"{act_med_kb:.1f} KB\n(-{ctx_red:.1f}%)",
+        f"{start_kb:.1f} KB\n(-{start_red:.1f}%)",
+    ]
     for xi, val, txt in zip(x, cvals, annots):
-        ax2.text(xi, val + 2.2, txt, ha="center", va="bottom", fontsize=7.1, fontweight="bold", color="#111827")
+        ax2.text(xi, val + 2.2, txt, ha="center", va="bottom", fontsize=7.0, fontweight="bold", color="#111827")
 
     ax2.set_xticks(x)
-    ax2.set_xticklabels(cats, fontsize=7.5)
+    ax2.set_xticklabels(cats, fontsize=7.6)
     ax2.set_ylim(0, mono_kb * 1.24)
     ax2.set_ylabel("Loaded Prompt Context (KB)", fontsize=8.2, fontweight="bold")
-    ax2.set_title("(b) Prompt Context Savings", fontsize=8.5, fontweight="bold", pad=6)
+    ax2.set_title("(b) Prompt Context Savings", fontsize=8.5, fontweight="bold", pad=28)
     ax2.grid(axis="y", linestyle="--", alpha=0.35, zorder=0)
     ax2.spines["top"].set_visible(False)
     ax2.spines["right"].set_visible(False)

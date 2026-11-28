@@ -44,5 +44,35 @@
       }
     }
   },
-  "retrieved_at": "2026-11-27T13:57:04Z"
+  "retrieved_at": "2026-11-27T13:57:04Z",
+  "verified_repo_files": {
+    "harnesses_present": [
+      "antigravity",
+      "claude",
+      "codex"
+    ],
+    "skills": [
+      "egm-bootstrap",
+      "egm-brainstorm",
+      "egm-draft",
+      "egm-drift-report",
+      "egm-resolve",
+      "egm-review",
+      "egm-review-loop"
+    ],
+    "agents": [
+      "bootstrap_orchestrator",
+      "codebase_details",
+      "comprehension",
+      "design_critic",
+      "implementation_readiness",
+      "inventive_catalyst",
+      "structural",
+      "style",
+      "synthesizer",
+      "zoom_out"
+    ],
+    "readme_excerpt": "<p align=\"center\">\n  <a href=\"https://egm.dev\"><img src=\"docs/assets/readme-header.svg\" width=\"480\" height=\"116\" alt=\"Elephant-Goldfish Model\"></a>\n</p>\n\n<p align=\"center\">Design with an elephant. Review with a goldfish.</p>\n\n<p align=\"center\">\n  <a href=\"#install\">Install</a> &ensp;\u00b7&ensp;\n  <a href=\"#try-your-first-design\">Quickstart</a> &ensp;\u00b7&ensp;\n  <a href=\"docs/getting_started.md\">Documentation</a> &ensp;\u00b7&ensp;\n  <a href=\"https://egm.dev\">Website</a>\n</p>\n\n<br>\n\nDevelop ideas with context and review documents with fresh eyes. EGM is an open-source plugin for AI assistants.\n\n**Elephant** holds your project context and drafts the specification. **Goldfish** reviewers examine the draft and referenced source material without the earlier conversation, helping expose unstated assumptions and blind spots. **You** make the architectural trade-offs and approve the specification before implementing.\n\nThe built-in draft and design-review workflow targets software specifications. For other documents, choose reviewers and standards with `/egm-review-loop`. Bootstrap and drift reporting apply to software codebases.\n\n## Install\n\nChoose your coding agent. Install the complete plugin so its skills can read the reviewer prompts and document standards.\n\n### ChatGPT and Codex desktop\n\nOpen the [published EGM plugin](https://chatgpt.com/plugins/plugins_6aeb90f47ec88191a3c107e01d3eb357) in the desktop app and install it. This listing is desktop-only. For Codex CLI, use the commands below.",
+    "synthesizer_excerpt": "---\nname: egm-synthesizer\ndescription: Intermediate Swarm Compiler and Aggregator coordinating parallel Goldfish reviewers, deduplicating findings, and compiling deliverable reports.\nlicense: Apache-2.0\n---\n\n# Core Mandates (Swarm Compiler & Output Synthesizer)\n\nYou are the **EGM Synthesizer Persona**. You serve as an intermediate orchestrator and technical compiler between the root agent (the Elephant) and the swarm of stateless Goldfish subagents.\n\n1. **Subagent Delegation**: When requested by the Elephant, you spawn and coordinate the individual Goldfish subagents using your harness's subagent tool.\n2. **Output Offloading & Normalization**: The Goldfish subagents report raw findings in unconstrained natural language. You take full responsibility for normalizing their feedback, deduplicating overlapping points, grouping findings by severity (\ud83d\udd34 Blocker, \ud83d\udfe1 Major, \ud83d\udfe2 Nit), and normalizing "
+  }
 }

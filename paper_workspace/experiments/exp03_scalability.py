@@ -359,6 +359,79 @@ def compile_paranoid_venue(venue_name: str, repo_root: Path, po_tools: Path, tmp
     return (fmt_rc == 0), id_leaks, gen_creator, round(dt_ms, 2)
 
 
+def test_paranoid_containment(tmp_root: Path) -> dict[str, int]:
+    """Empirically test paranoid TeX containment across 3 adversarial payloads:
+      1. E2 macro-obfuscated \\csname write18\\endcsname shell execution (--no-shell-escape)
+      2. Parent-directory \\openout write traversal (openout_any=p)
+      3. Parent-directory \\openin read traversal (openin_any=p; no-op in TeX Live 2026)
+    """
+    adv_dir = tmp_root / "adv_sandbox"
+    sub_dir = adv_dir / "sub"
+    sub_dir.mkdir(parents=True, exist_ok=True)
+    secret_file = adv_dir / "secret_parent.txt"
+    secret_token = "TOPSECRET9471"
+    secret_file.write_text(secret_token + "\n", encoding="utf-8")
+
+    env = os.environ.copy()
+    env["openin_any"] = "p"
+    env["openout_any"] = "p"
+
+    # Attack 1: E2 obfuscated \csname write18\endcsname shell execution
+    marker = sub_dir / "pwned_marker.txt"
+    (sub_dir / "attack_e2.tex").write_text(
+        "\\documentclass{article}\n\\begin{document}\n"
+        "\\def\\cmd{write18}\n\\immediate\\csname \\cmd\\endcsname{touch pwned_marker.txt}\n"
+        "Hello.\n\\end{document}\n",
+        encoding="utf-8",
+    )
+    subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", "--no-shell-escape", "attack_e2.tex"],
+        cwd=sub_dir, env=env, capture_output=True, text=True, check=False,
+    )
+    e2_blocked = 1 if not marker.exists() else 0
+
+    # Attack 2: Parent-directory \openout write traversal (blocked by openout_any=p)
+    pwn_out = adv_dir / "pwn_out.txt"
+    (sub_dir / "attack_openout.tex").write_text(
+        "\\documentclass{article}\n\\begin{document}\n"
+        "\\newwrite\\w\\immediate\\openout\\w=../pwn_out.txt\\immediate\\write\\w{pwn}\\immediate\\closeout\\w\n"
+        "\\end{document}\n",
+        encoding="utf-8",
+    )
+    subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", "--no-shell-escape", "attack_openout.tex"],
+        cwd=sub_dir, env=env, capture_output=True, text=True, check=False,
+    )
+    openout_blocked = 1 if not pwn_out.exists() else 0
+
+    # Attack 3: Parent-directory \openin read traversal (tests openin_any=p; TeX Live 2026 regression)
+    (sub_dir / "attack_openin.tex").write_text(
+        "\\documentclass{article}\n\\begin{document}\n"
+        "\\newread\\sf\\openin\\sf=../secret_parent.txt\n"
+        "\\ifeof\\sf BLOCKED\\else\\read\\sf to\\sline EXFIL:\\sline\\fi\\closein\\sf\n"
+        "\\end{document}\n",
+        encoding="utf-8",
+    )
+    subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", "--no-shell-escape", "attack_openin.tex"],
+        cwd=sub_dir, env=env, capture_output=True, text=True, check=False,
+    )
+    openin_pdf = sub_dir / "attack_openin.pdf"
+    exfiltrated = False
+    if openin_pdf.is_file() and shutil.which("pdftotext"):
+        txt = subprocess.run(["pdftotext", str(openin_pdf), "-"], capture_output=True, text=True, check=False).stdout
+        exfiltrated = secret_token in txt
+    openin_blocked = 0 if exfiltrated else 1
+
+    return {
+        "adversarial_tex_tested": 3,
+        "adversarial_tex_blocked": e2_blocked + openout_blocked + openin_blocked,
+        "e2_macro_shell_blocked": e2_blocked,
+        "openout_parent_blocked": openout_blocked,
+        "openin_parent_blocked": openin_blocked,
+    }
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, required=True)
@@ -419,6 +492,8 @@ def main() -> int:
             total_leaks += v_leaks
             total_gen_creator += v_gen
 
+        adv_metrics = test_paranoid_containment(tmp_root)
+
     # Write series.csv
     csv_path = args.out_dir / "series.csv"
     with csv_path.open("w", newline="", encoding="utf-8") as fh:
@@ -441,6 +516,7 @@ def main() -> int:
         "venues_compiled_ok": venues_ok,
         "pdfinfo_leaks": total_leaks,
         "pdfinfo_generic_creator_tags": total_gen_creator,
+        **adv_metrics,
         **venue_timings,
     }
     for r in rows:

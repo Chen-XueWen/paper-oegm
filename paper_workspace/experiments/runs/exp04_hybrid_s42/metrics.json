@@ -4,6 +4,7 @@
   "metrics": {
     "seed": 42,
     "domain": "ml_systems",
+    "b4_latency_ms": 91.97,
     "det_mech_recall": 100.0,
     "det_sem_recall": 0.0,
     "det_total_recall": 50.0,

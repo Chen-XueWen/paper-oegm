@@ -21,6 +21,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -350,9 +351,11 @@ def generate_fixture(fixtures_root: Path, seed: int) -> dict[str, Any]:
 
 
 def eval_deterministic(ws: Path, po_tools: Path, gt: dict[str, Any]) -> dict[str, Any]:
-    """Run real po_tools.py review-preflight and format-verify and map hits to M1..M5 and S1..S5."""
+    """Run real po_tools.py review-preflight and format-verify (timed) and map hits to M1..M5 and S1..S5."""
+    t0 = time.perf_counter()
     pre = subprocess.run([sys.executable, str(po_tools), "review-preflight", "--workspace", str(ws)], capture_output=True, text=True, check=False)
     fmt = subprocess.run([sys.executable, str(po_tools), "format-verify", "--workspace", str(ws)], capture_output=True, text=True, check=False)
+    b4_ms = round((time.perf_counter() - t0) * 1000.0, 2)
     pre_json = json.loads(pre.stdout) if pre.stdout.strip() else {}
     fmt_json = json.loads(fmt.stdout) if fmt.stdout.strip() else {}
     all_issues = " | ".join(b.get("issue", "") for b in (pre_json.get("blockers", []) + fmt_json.get("blockers", [])))
@@ -385,6 +388,7 @@ def eval_deterministic(ws: Path, po_tools: Path, gt: dict[str, Any]) -> dict[str
     return {
         "preflight_rc": pre.returncode,
         "format_rc": fmt.returncode,
+        "b4_latency_ms": b4_ms,
         "preflight_blockers": pre_json.get("blockers", []),
         "format_blockers": fmt_json.get("blockers", []),
         "detected": detected,
@@ -444,6 +448,7 @@ def score_critic_outputs(det: dict[str, Any], critic_data: dict[str, Any], gt: d
     return {
         "seed": gt["seed"],
         "domain": gt["domain"],
+        "b4_latency_ms": det.get("b4_latency_ms", 0.0),
         "det_mech_recall": rec(det_map, mech_ids),
         "det_sem_recall": rec(det_map, sem_ids),
         "det_total_recall": rec(det_map, mech_ids + sem_ids),

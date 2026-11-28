@@ -1,12 +1,12 @@
 {
   "run_id": "exp03_scalability_agg",
   "status": "completed",
-  "started_at": "2026-11-27T14:22:03Z",
-  "finished_at": "2026-11-27T14:22:03Z",
+  "started_at": "2026-11-28T02:56:08Z",
+  "finished_at": "2026-11-28T02:56:08Z",
   "exit_code": 0,
   "is_synthetic": false,
-  "git_commit": "dba1564eb962b9f5bf54a3f7c58e52cde4d4db7d",
-  "git_dirty": false,
+  "git_commit": "d020b23506b97b98265d8fb4b9bfae4670830801",
+  "git_dirty": true,
   "cmd": "aggregate_runs.py --agg-id exp03_scalability_agg --sources exp03_scalability_s42,exp03_scalability_s43,exp03_scalability_s44,exp03_scalability_s45,exp03_scalability_s46",
   "source_runs": [
     "exp03_scalability_s42",

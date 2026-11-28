@@ -89,9 +89,19 @@
       "std": 0.0,
       "n": 5
     },
+    "evasion_b1_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "evasion_b0_recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
     "mean_latency_ms": {
-      "mean": 115.72,
-      "std": 6.03,
+      "mean": 108.2,
+      "std": 2.07,
       "n": 5
     },
     "per_family_f1_full_recall": {

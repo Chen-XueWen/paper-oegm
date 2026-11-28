@@ -1,0 +1,69 @@
+\section{System Design}\label{sec:method}
+
+PaperOEGM packages an end-to-end research-to-paper workflow across Antigravity, Claude Code, and Codex around four invariants: (1) budgeted progressive-disclosure skills with human gates, (2) zero-dependency deterministic verification over single-source state, (3) flat single-level read-only peer review, and (4) defense-in-depth build safety.
+
+\subsection{Progressive-Disclosure Skill Graph and State Machine}\label{sec:method-skills}
+
+PaperOEGM decomposes authoring into ten skills under \texttt{skills/\allowbreak{}po-*/\allowbreak{}SKILL.\allowbreak{}md} (\texttt{po-literature} runs in two passes: Stage 1a early survey and optional Stage 1b late refresh) across three phases (Figure~\ref{fig:architecture}, Layer 1):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Phase 1 (Intake \& Experiments):} Stage 0 \texttt{po-start} (routing, secret denylist, toolchain probe), Stage 1a \texttt{po-literature}, Stage 2 \texttt{po-exp-design} (falsifiable hypotheses, ablations, metric schema), and Stage 3 \texttt{po-exp-code} (safe bash runners, \texttt{\mbox{-{}-}dry-\allowbreak{}run} smoke checks).
+\item
+  \textbf{Phase 2 (Plan \& Draft):} Stage 4 \texttt{po-outline} (canonical run reconciliation, page budget), Stage 1b \texttt{po-literature} (optional), Stage 5 \texttt{po-visuals} (code-rendered plots, multimodal audit), and Stage 6 \texttt{po-draft} (modular Markdown with inline provenance tags).
+\item
+  \textbf{Phase 3 (Review \& Build):} Stage 7 \texttt{po-review} (preflight + five flat parallel read-only critics), Stage 8 \texttt{po-resolve} (reversible snapshots and three-bucket triage separating mechanical fixes, scientific decisions, and optional polish), and Stage 9 \texttt{po-format} (Pandoc export, paranoid LaTeX build, \texttt{pdfinfo} hygiene, post-compile PDF layout audit).
+\end{itemize}
+
+Guided by empirical skill-reuse findings \citep{zhang2026reusable, li2026skillsbench}, every \texttt{SKILL.\allowbreak{}md} is capped at \texttt{\textless{}=\ 250} lines and \texttt{\textless{}=\ 12,\allowbreak{}000} bytes (half of Antigravity's observed 24 KB / 24,000-byte skill limit), offloading shared rules into \texttt{execution\_\allowbreak{}instructions.\allowbreak{}md}, six protocols (\texttt{resources/\allowbreak{}protocols/}), and five review standards (\texttt{resources/\allowbreak{}review\_\allowbreak{}standards/}). Every skill declares \texttt{disable-model-invocation:\ true}, blocking unprompted transitions and enforcing single-select human checkpoints. Single-source \texttt{paper\_\allowbreak{}state.\allowbreak{}json} owns title, venue (\texttt{name}, \texttt{template\_\allowbreak{}year}, \texttt{submission\_\allowbreak{}mode}, \texttt{page\_\allowbreak{}limit\_\allowbreak{}main}), probed tools, and SHA-256 \texttt{input\_\allowbreak{}hashes}/\allowbreak{}\texttt{output\_\allowbreak{}hashes}, regenerating \texttt{STATUS.\allowbreak{}md} atomically on every sync.
+
+Let \(B_{\text{mono}}\) be the monolithic sum of all ten \texttt{SKILL.\allowbreak{}md} files, \texttt{execution\_\allowbreak{}instructions.\allowbreak{}md}, six protocols, and five standards; \(B_{\text{stage}}(s)\) the active footprint of skill \(s\) (\texttt{SKILL.\allowbreak{}md} + \texttt{execution\_\allowbreak{}instructions.\allowbreak{}md} + protocols directly referenced by \(s\)); and \(B_{\text{idx}}\) the combined startup YAML frontmatter index. Per-stage context reduction \(R_{\text{ctx}}\) and startup index reduction \(R_{\text{idx}}\) are:
+
+\begin{equation}
+\begin{aligned}
+R_{\text{ctx}} &= \left(1 - \frac{\operatorname{median}_{s} B_{\text{stage}}(s)}{B_{\text{mono}}}\right) \times 100\%, \\
+R_{\text{idx}} &= \left(1 - \frac{B_{\text{idx}}}{B_{\text{mono}}}\right) \times 100\%
+\end{aligned}
+\label{eq:context-reduction}
+\end{equation}
+
+\hypertarget{sec:method-verifier}{%
+\subsection{\texorpdfstring{Zero-Dependency Deterministic Verifier (\texttt{po\_\allowbreak{}tools.\allowbreak{}py})}{Zero-Dependency Deterministic Verifier (po\_tools.py)}}\label{sec:method-verifier}}
+
+To supply zero-stochasticity external verification \citep{huang2024selfcorrect} without runtime \texttt{pip\ install}, PaperOEGM bundles \texttt{resources/\allowbreak{}scripts/\allowbreak{}po\_\allowbreak{}tools.\allowbreak{}py}, a 758-line Python 3.10+ standard-library CLI with four subcommands (Figure~\ref{fig:architecture}, Layer 2):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{\texttt{state-sync}:} Atomically validates \texttt{paper\_\allowbreak{}state.\allowbreak{}json} (\texttt{tmp} + \texttt{os.\allowbreak{}replace}), probes local binaries (\texttt{pandoc}, \texttt{latexmk}/\allowbreak{}\texttt{pdflatex}, \texttt{bibtex}, \texttt{pdftoppm}, optional \texttt{matplotlib}), counts unresolved \texttt{TODO} or pending-run markers, and flags upstream-modified downstream stages \texttt{stale}.
+\item
+  \textbf{\texttt{check-readonly}:} Snapshots (\texttt{\mbox{-{}-}create}) and verifies (\texttt{\mbox{-{}-}verify}) SHA-256 digests of tracked files inside the workspace before and after read-only critic execution, exiting 1 on any added, modified, or deleted file.
+\item
+  \textbf{\texttt{review-preflight}:} Audits mechanical provenance before spawning critics: (i) extracts Pandoc (\texttt{{[}@key{]}}, \texttt{@key}) and LaTeX (\texttt{\textbackslash{}cite*\{key\}}) citations across \texttt{manuscript/\allowbreak{}sections/\allowbreak{}*.md}, enforcing 1:1 parity with \texttt{literature/\allowbreak{}references.\allowbreak{}bib} and \texttt{literature/\allowbreak{}citation\_\allowbreak{}ledger.\allowbreak{}json}, blocking \texttt{unverified\_\allowbreak{}needs\_\allowbreak{}human\_\allowbreak{}check}, and confirming \texttt{verified\_\allowbreak{}source} files exist under \texttt{literature/\allowbreak{}sources/}; (ii) blocks references to the isolated \texttt{dry\_\allowbreak{}run/} path, \texttt{is\_\allowbreak{}synthetic:\ true} runs, and unattested \texttt{user\_\allowbreak{}byo} runs while flagging \texttt{git\_\allowbreak{}dirty:\ true} as Major; and (iii) parses inline \texttt{\textless{}!\mbox{-{}-}\ run:\textless{}run\_\allowbreak{}id\textgreater{}\ \mbox{-{}-}\textgreater{}} markers, auditing every decimal token \(v\) (\(d\) fractional digits) in the following paragraph/table block against the flattened numeric set \(\mathcal{M}(r)\) of canonical \texttt{metrics.\allowbreak{}json}:
+
+  \begin{equation}
+\begin{aligned}
+&|m - v| \le \epsilon(d) \;\lor\; \\
+&\quad \bigl(0 \le m \le 1 \;\land\; |100m - v| \le \epsilon(d)\bigr), \\
+&\quad \epsilon(d) = 0.55 \times 10^{-d}
+\end{aligned}
+\label{eq:decimal-match}
+\end{equation}
+
+  where the second disjunct permits \(0\text{--}1 \to \%\) scaling strictly for \(m \in [0, 1]\) and \(\epsilon(d)\) allows standard rounding. Restricting regex matching to decimal tokens (\texttt{\textbackslash{}d+\textbackslash{}.\textbackslash{}d+}) avoids false alarms on section or epoch integers, intentionally delegating integer-count auditing, metric-key swapping within unordered \(\mathcal{M}(r)\), unit-ambiguous \([0, 1]\) scaling, and untagged paragraphs to \texttt{po-evidence-auditor}.
+\item
+  \textbf{\texttt{format-verify}:} Scans \texttt{.zip}/\allowbreak{}\texttt{.tar.\allowbreak{}*} template archives for Zip Slip (\texttt{..}, leading \texttt{/}), symlinks/hardlinks, and active TeX shell pipes (\texttt{\textbackslash{}write18}, \texttt{\textbackslash{}immediate\allowbreak{}\textbackslash{}write18}, \texttt{\textbackslash{}input\{\textbar{}...\}}) after stripping \texttt{\%} comments; checks \texttt{.md}-to-\texttt{.tex} citation, \texttt{\textbackslash{}label\{\}}, and non-dimension decimal parity (filtering LaTeX units like \texttt{0.85\textbackslash{}linewidth}, \texttt{10.5pt}); parses TeX \texttt{.log}/\allowbreak{}\texttt{.aux} telemetry (undefined refs/cites, missing graphics, \texttt{Overfull\ \textbackslash{}hbox\ \textgreater{}\ 2pt}); and enforces double-blind hygiene across \texttt{.tex} body and \texttt{\%} comments (blocking \texttt{/\allowbreak{}Users/}, \texttt{/\allowbreak{}home/}, \texttt{C:\textbackslash{}Users\textbackslash{}}, GitHub URLs, \texttt{\textbackslash{}iclrfinalcopy}, \texttt{\textbackslash{}usepackage\{cvpr\}}).
+\end{enumerate}
+
+\subsection{Experiment Safety, Visuals, and Context Offloading}\label{sec:method-safety}
+
+Stage 3 runners enforce \texttt{set\ -euo\ pipefail}, double-quoted paths, \texttt{WANDB\_\allowbreak{}MODE=offline}, non-git fallback (\texttt{git\_\allowbreak{}commit:\ "none"}, \texttt{git\_\allowbreak{}dirty:\ null}), secret/\texttt{\$HOME} redaction in logged \texttt{cmd}, crash-safe startup \texttt{run\_\allowbreak{}manifest.\allowbreak{}json} + \texttt{trap\ finalize\ EXIT}, atomic \texttt{metrics.\allowbreak{}json} (\texttt{\textless{}\ 10\ KB}), and \texttt{\mbox{-{}-}dry-\allowbreak{}run} isolation in \texttt{dry\_\allowbreak{}run/\allowbreak{}\textless{}run\_\allowbreak{}id\textgreater{}/} (\texttt{is\_\allowbreak{}synthetic:\ true}).
+
+Stage 1 stores raw primary-source API snapshots in \texttt{literature/\allowbreak{}sources/\allowbreak{}\textless{}citekey\textgreater{}.json} and keeps only compact pointers plus 1--2 sentence summaries in \texttt{citation\_\allowbreak{}ledger.\allowbreak{}json}, giving ledger offload ratio \(R_{\text{off}} = (1 - S_{\text{led}} / (S_{\text{led}} + S_{\text{src}})) \times 100\%\) for non-citation stages while \texttt{po-citation-auditor} loads snapshots on demand. Stage 5 requires newly generated quantitative plots to load directly from canonical non-synthetic \texttt{metrics.\allowbreak{}json}/\allowbreak{}\texttt{series.\allowbreak{}csv} via version-controlled Python scripts (optional \texttt{matplotlib}, zero hardcoded arrays, zero generative raster tools on data), exporting colorblind-safe dual-encoded vector PDFs with stripped metadata plus high-DPI PNG previews verified visually.
+
+\subsection{Flat Critics, Paranoid TeX Sandbox, and Multi-Harness Packaging}\label{sec:method-critics}
+
+Stage 7 dispatches five stateless read-only personas (\texttt{agents/\allowbreak{}po-*.md}, \texttt{\textless{}=\ 6,\allowbreak{}000} bytes)---\texttt{po-peer-reviewer}, \texttt{po-evidence-auditor}, \texttt{po-citation-auditor}, \texttt{po-visual-format-critic} (Pass 1 figures + Pass 2 chunked 4--5 page PDF layout), and \texttt{po-clarity-reader}---\textbf{flat at depth one in parallel} (Figure~\ref{fig:architecture}, Layer 3a). Unlike EGM's nested \texttt{synthesizer} \citep{google2026egm}, flat dispatch avoids nesting failures on Antigravity and Claude Code Cowork, bounds each critic to 1,500 output tokens, and logs a 4-state \texttt{Reviewer\ Status} table (\texttt{completed}, \texttt{skipped\_\allowbreak{}not\_\allowbreak{}applicable}, \texttt{carried\_\allowbreak{}forward}, \texttt{not\_\allowbreak{}run}); Claude Code adapters (\texttt{.claude-plugin/\allowbreak{}agents/\allowbreak{}po-*.md}) restrict \texttt{tools:} strictly to \texttt{Read,\allowbreak{}\ Grep,\allowbreak{}\ Glob}.
+
+Because static regexes miss macro-obfuscated TeX escapes (e.g., \texttt{\textbackslash{}csname\ write18\textbackslash{}endcsname}), Stage 9 wraps compilation with paranoid flags (\texttt{openin\_\allowbreak{}any=p\ openout\_\allowbreak{}any=p\ pdflatex\ \mbox{-{}-}no-\allowbreak{}shell-escape}, where \texttt{p} requests paranoid mode disallowing dotfiles and parent directories), strips identity metadata via \texttt{\textbackslash{}hypersetup\{pdfauthor=\{\},\allowbreak{}pdfcreator=\{\},\allowbreak{}pdfproducer=\{\}\}}, and checks \texttt{pdfinfo}. As Section~\ref{sec:exp-rq3} verifies, \texttt{\mbox{-{}-}no-\allowbreak{}shell-escape} and \texttt{openout\_\allowbreak{}any=p} hold on TeX Live 2026 while \texttt{openin\_\allowbreak{}any=p} became an upstream no-op. Finally, \texttt{scripts/\allowbreak{}pack\_\allowbreak{}plugin.\allowbreak{}py} synchronizes all five manifests and emits deterministic ZIP bundles (fixed \texttt{1980-01-01} timestamps, sorted traversal) across Antigravity, Claude Code, and Codex.

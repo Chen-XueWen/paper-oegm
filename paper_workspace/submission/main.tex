@@ -1,0 +1,62 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[sigplan,review,anonymous,pbalance]{acmart}
+
+% === Layout Tuning Block ===
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[htt]{hyphenat}
+\emergencystretch=2em
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{2pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\dbltopfraction}{0.92}
+\renewcommand{\textfraction}{0.08}
+\settopmatter{printacmref=false, printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\acmConference[Agent Skills '27]{Agent Skills Workshop (ACM CAIS '27)}{2027}{TBA}
+\acmYear{2027}
+\AtBeginDocument{\hypersetup{pdfauthor={},pdfcreator={},pdfproducer={}}}
+\renewcommand\showeprint[2][]{arXiv:#2.}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}}
+% === End Layout Tuning Block ===
+
+\title[PaperOEGM: Composable Zero-API-Key Agent Skills]{PaperOEGM: Composable Zero-API-Key Agent Skills with Deterministic Provenance Verification and Fresh-Context Peer Review}
+
+\author{Anonymous Author(s)}
+\affiliation{%
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+\email{anonymous@example.edu}
+
+\begin{document}
+
+\begin{abstract}
+\input{sections/01_abstract}
+\end{abstract}
+
+\keywords{Agent Skills, Coding Agents, Scientific Provenance, Automated Peer Review, LaTeX Security}
+
+\maketitle
+
+\input{sections/02_introduction}
+\input{sections/03_related_work}
+\input{sections/04_method}
+\input{sections/05_experiments}
+\input{sections/06_limitations}
+\input{sections/07_conclusion}
+
+{\interlinepenalty=10000
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}}
+
+\end{document}

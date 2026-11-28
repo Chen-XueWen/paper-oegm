@@ -577,6 +577,8 @@ def run_benchmark(seed: int, po_tools: Path, dry_run: bool) -> dict[str, Any]:
     b1_rec, b1_prec, b1_f1, b1_fpr = rates(totals["b1"])
     b0_rec, b0_prec, b0_f1, b0_fpr = rates(totals["b0"])
     ev_rec = round(evasion_hits["full"] / max(1, evasion_hits["total"]) * 100.0, 2)
+    ev_b1_rec = round(evasion_hits["b1"] / max(1, evasion_hits["total"]) * 100.0, 2)
+    ev_b0_rec = round(evasion_hits["b0"] / max(1, evasion_hits["total"]) * 100.0, 2)
     mean_lat = round(sum(latencies) / max(1, len(latencies)), 2)
 
     metrics: dict[str, Any] = {
@@ -596,6 +598,8 @@ def run_benchmark(seed: int, po_tools: Path, dry_run: bool) -> dict[str, Any]:
         "compiler_only_f1": b0_f1,
         "compiler_only_fpr": b0_fpr,
         "evasion_det_recall": ev_rec,
+        "evasion_b1_recall": ev_b1_rec,
+        "evasion_b0_recall": ev_b0_rec,
         "mean_latency_ms": mean_lat,
     }
     for fam, d in per_family.items():

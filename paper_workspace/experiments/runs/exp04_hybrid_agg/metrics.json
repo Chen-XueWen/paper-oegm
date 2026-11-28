@@ -12,6 +12,11 @@
       "std": 1.0,
       "n": 3
     },
+    "b4_latency_ms": {
+      "mean": 91.71,
+      "std": 0.26,
+      "n": 3
+    },
     "det_mech_recall": {
       "mean": 100.0,
       "std": 0.0,

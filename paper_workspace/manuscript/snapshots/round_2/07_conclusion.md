@@ -1,0 +1,14 @@
+# Conclusion {#sec:conclusion}
+
+Building reliable Agent Skills for high-stakes scientific workflows requires moving beyond monolithic natural-language playbooks and same-context LLM self-review. We presented **PaperOEGM**, a zero-API-key Agent Skills plugin packaged for Antigravity (live-verified end to end), Claude Code (packaging-validated), and Codex (structurally packaged). PaperOEGM decomposes the research-to-paper lifecycle into ten progressive-disclosure skills backed by a zero-dependency Python standard-library verifier (`po_tools.py`), five flat single-level fresh-context read-only critics, and paranoid LaTeX compilation.
+
+Our empirical evaluation yields three concrete lessons for the Agent Skills community:
+
+<!-- run:exp02_packaging_agg -->
+1. **Strict byte budgets and protocol offloading enable cross-harness portability:** Capping each `SKILL.md` at 12 KB (achieving 3,466--4,526 bytes actual size, at most 63 lines) cuts median active-stage prompt context by 82.16% and startup routing context by 97.14% relative to a monolithic workflow, maintains 81.14% headroom below Antigravity's 24 KB (24,000-byte) skill ceiling (where the public EGM reference plugin reaches 24,257 bytes), and yields 100.0% deterministic ZIP SHA-256 build parity with 0 packaging defects.
+
+2. **Deterministic stdlib scripts, native sandboxes, and semantic critics are complementary:** `po_tools.py` catches 100.0% of mechanical provenance, parity, anonymity, and archive supply-chain faults on PO-FaultBench with 0.0% FPR in 108.20 ms/workspace—yet records 0.0% recall on semantic and macro-obfuscation evasions. Scaling verification to 120 citations takes 268.55 ms with 87.96% ledger context offloading and compiles three double-blind venues with zero identity leaks, while our adversarial TeX test proved that `--no-shell-escape` and `openout_any=p` block obfuscated shell escapes and parent-directory writes even as TeX Live 2026 silently retired `openin_any=p`. Pairing deterministic checks with flat parallel read-only critics closes the semantic gap (100.0% recovery across 15 live Antigravity invocations with zero workspace mutations and bounded token budgets).
+
+3. **Zero-API-key design lowers adoption friction without sacrificing auditability:** Relying solely on the user's active coding-agent runtime and Python's standard library (with optional `matplotlib` for Stage 5 plots) removes external credential management and opaque remote orchestration.
+
+Future work includes adding OS-level container/sandbox wrappers for TeX read isolation on TeX Live 2026+, cross-harness live critic benchmarks (including same-context and single-agent baselines) on Claude Code and Codex, batched single-process `po_tools.py` execution, Abstract Syntax Tree (AST)-level LaTeX macro inspection, `.DS_Store` exclusion in `check-readonly`, and expanding PO-FaultBench with real-world anonymized peer-review errata.

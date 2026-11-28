@@ -1,6 +1,7 @@
 {
   "preflight_rc": 1,
   "format_rc": 1,
+  "b4_latency_ms": 91.45,
   "preflight_blockers": [
     {
       "category": "citation",

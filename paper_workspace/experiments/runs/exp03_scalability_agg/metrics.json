@@ -10,28 +10,28 @@
   ],
   "metrics": {
     "xl_total_ms": {
-      "mean": 272.48,
-      "std": 3.99,
+      "mean": 268.55,
+      "std": 6.8,
       "n": 5
     },
     "xl_state_sync_ms": {
-      "mean": 134.18,
-      "std": 1.83,
+      "mean": 125.52,
+      "std": 2.81,
       "n": 5
     },
     "xl_review_preflight_ms": {
-      "mean": 41.68,
-      "std": 0.98,
+      "mean": 43.06,
+      "std": 3.75,
       "n": 5
     },
     "xl_format_verify_ms": {
-      "mean": 40.94,
-      "std": 2.61,
+      "mean": 41.91,
+      "std": 3.51,
       "n": 5
     },
     "xl_check_readonly_ms": {
-      "mean": 55.68,
-      "std": 1.08,
+      "mean": 58.07,
+      "std": 3.56,
       "n": 5
     },
     "ledger_bytes_xl": {
@@ -69,24 +69,49 @@
       "std": 0.0,
       "n": 5
     },
+    "adversarial_tex_tested": {
+      "mean": 3.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "adversarial_tex_blocked": {
+      "mean": 2.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "e2_macro_shell_blocked": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "openout_parent_blocked": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "openin_parent_blocked": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 5
+    },
     "compile_acmart_sigplan_ms": {
-      "mean": 1844.44,
-      "std": 16.46,
+      "mean": 1698.11,
+      "std": 27.14,
       "n": 5
     },
     "compile_cvpr2025_ms": {
-      "mean": 1388.22,
-      "std": 17.73,
+      "mean": 1285.42,
+      "std": 28.64,
       "n": 5
     },
     "compile_iclr2025_ms": {
-      "mean": 1079.45,
-      "std": 13.33,
+      "mean": 982.74,
+      "std": 7.24,
       "n": 5
     },
     "scale_s_total_ms": {
-      "mean": 260.37,
-      "std": 8.73,
+      "mean": 266.0,
+      "std": 7.28,
       "n": 5
     },
     "scale_s_offload_pct": {
@@ -95,8 +120,8 @@
       "n": 5
     },
     "scale_m_total_ms": {
-      "mean": 263.89,
-      "std": 6.85,
+      "mean": 265.49,
+      "std": 4.94,
       "n": 5
     },
     "scale_m_offload_pct": {
@@ -105,8 +130,8 @@
       "n": 5
     },
     "scale_l_total_ms": {
-      "mean": 268.75,
-      "std": 2.28,
+      "mean": 262.39,
+      "std": 7.84,
       "n": 5
     },
     "scale_l_offload_pct": {
@@ -115,8 +140,8 @@
       "n": 5
     },
     "scale_xl_total_ms": {
-      "mean": 272.48,
-      "std": 3.99,
+      "mean": 268.55,
+      "std": 6.8,
       "n": 5
     },
     "scale_xl_offload_pct": {

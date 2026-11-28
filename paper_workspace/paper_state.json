@@ -66,15 +66,15 @@
       "output_hashes": {
         "experiments/env.sh": "sha256:a783298a71530221ac8eca29e6c92b2fb3fbecfb8fa2efe26731adfee5205e57",
         "experiments/check_env.sh": "sha256:ffa9629ff38d6c21b7ea86befa7673daa42821ef9dd30e17a2bb2f38b8e38d02",
-        "experiments/run_exp01_faultbench.sh": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/run_exp01_faultbench.sh": "sha256:50d96b9e91ff017536b86643a3858fead231884383cf909cf8233ecdb937d915",
         "experiments/run_exp02_packaging.sh": "sha256:a4b16c5fc78635a7d09edcbb204c65a1818a33f7b0b82216040a4aad4216d86c",
         "experiments/run_exp03_scalability.sh": "sha256:7219a79894912bdbef498bdd00b363d8fab827f34497e11ddfb5895a867f340b",
         "experiments/run_exp04_hybrid.sh": "sha256:686d665698935938d8280aa27960d2dc7ad4801b9ec677ef9d63b00065fdcdef"
       },
-      "updated_at": "2026-11-27T14:34:24Z"
+      "updated_at": "2026-11-28T03:02:09Z"
     },
     "po-outline": {
-      "status": "approved",
+      "status": "stale",
       "input_hashes": {
         "experiments/provenance_index.json": "sha256:2e2e86d2ba1d80f638c4535e4cc2dadc1dd78b9d0b9f3fd251f5c5b75d3e8aed"
       },
@@ -97,18 +97,18 @@
       "status": "approved",
       "input_hashes": {
         "plan/outline.md": "sha256:9d05760b840c8c9d71d2d29071c2f01b4be6319a5267428cecff2467d3ea1da8",
-        "experiments/provenance_index.json": "sha256:2e2e86d2ba1d80f638c4535e4cc2dadc1dd78b9d0b9f3fd251f5c5b75d3e8aed"
+        "experiments/provenance_index.json": "sha256:5a0c17349e0f76f4ad87f7f02b64851ace0f14ebe92fec451bc5735b3e76fa82"
       },
       "outputs": [
         "visuals/manifest.md"
       ],
       "output_hashes": {
-        "visuals/manifest.md": "sha256:29113278b52ce2c4e830ee1e34298923c26d35cd785b52f5303cf82ed1cb70fe"
+        "visuals/manifest.md": "sha256:f33a2d8db42a208c86131527f7272642b5770fed4b29fc34463e3d08d1d64642"
       },
-      "updated_at": "2026-11-27T14:29:27Z"
+      "updated_at": "2026-11-28T03:02:09Z"
     },
     "po-draft": {
-      "status": "approved",
+      "status": "stale",
       "input_hashes": {
         "plan/outline.md": "sha256:9d05760b840c8c9d71d2d29071c2f01b4be6319a5267428cecff2467d3ea1da8",
         "literature/references.bib": "sha256:6561eae19c8e4189ff90d8d4c3eb9ea36abdd8cfa860fb5a1c5c9e087b8eae59",
@@ -126,15 +126,86 @@
       ],
       "output_hashes": {
         "manuscript/manuscript.yaml": "sha256:d8341c04469fafcc2f8eaf5a9759327e0d9869497704ab142ffb80200ee35b45",
-        "manuscript/sections/01_abstract.md": "sha256:bfca2849aee2800ea52a02f1d704030a856e9e190e67376381538cd10ed48ab7",
-        "manuscript/sections/02_introduction.md": "sha256:f0471c331124ac3e0035fc9e15253fb3887259da531f7bfde5f8da7667c16fe6",
-        "manuscript/sections/03_related_work.md": "sha256:6b6f4c56476c9268b8a42d6f83f05f686bc58387744d449de736072230a407d3",
-        "manuscript/sections/04_method.md": "sha256:b60536a454e3743707ea2068d926763468349e05a88fed7f28af99b031ea969a",
-        "manuscript/sections/05_experiments.md": "sha256:b52448638e2600f534a80dff97bd8250eccca25ffdd8788e9f807db7bc220d38",
-        "manuscript/sections/06_limitations.md": "sha256:1b801cf57b8b3093dda6c76e866e1edfec8fed5eea83f5b56643d5b9f5357180",
-        "manuscript/sections/07_conclusion.md": "sha256:74353d7e68b81d9e68df7fd9e5fd46ba678dd6cde6b53ff938379b638686a836"
+        "manuscript/sections/01_abstract.md": "sha256:7c49aa92051d28243f1e7b4a3b1ea71476d44816ef981942ec9942ab5b0d04ec",
+        "manuscript/sections/02_introduction.md": "sha256:c3dd1a93340448295c87eb280d41bd140ee3f1e709c5fbfd86166ca17e67e5fd",
+        "manuscript/sections/03_related_work.md": "sha256:507f7afacff3a0d2d2f140113f08594ef161a1a59e1114e2a05fa1615f748d9d",
+        "manuscript/sections/04_method.md": "sha256:f19ebe64e362356be56efe1f1a34f9d3941a677333cd2b198d937f4fe231a475",
+        "manuscript/sections/05_experiments.md": "sha256:dc7ff39ec015fa666568b9092629daf285907cf4539f8fbad23de7b54817d2d4",
+        "manuscript/sections/06_limitations.md": "sha256:c32947dc1b73be1345bfbb9764929cfeb50225f9d4066f18a39224dd29003384",
+        "manuscript/sections/07_conclusion.md": "sha256:d444f0468efaf39400982d4ebcd2ff0e1638c17c4a737ab09b61c2e071cd2378"
       },
       "updated_at": "2026-11-27T14:35:10Z"
+    },
+    "po-review": {
+      "status": "stale",
+      "input_hashes": {
+        "manuscript/sections/01_abstract.md": "sha256:bfca2849aee2800ea52a02f1d704030a856e9e190e67376381538cd10ed48ab7",
+        "manuscript/sections/05_experiments.md": "sha256:b52448638e2600f534a80dff97bd8250eccca25ffdd8788e9f807db7bc220d38",
+        "visuals/manifest.md": "sha256:29113278b52ce2c4e830ee1e34298923c26d35cd785b52f5303cf82ed1cb70fe"
+      },
+      "outputs": [
+        "reviews/round_1/review_report.md"
+      ],
+      "output_hashes": {
+        "reviews/round_1/review_report.md": "sha256:41079fcc664a79fe15f529a0b05086ffb0ee37aa5677ca9ca9051a2f359e61c1"
+      },
+      "updated_at": "2026-11-28T02:45:39Z"
+    },
+    "po-resolve": {
+      "status": "approved",
+      "input_hashes": {
+        "reviews/round_1/review_report.md": "sha256:41079fcc664a79fe15f529a0b05086ffb0ee37aa5677ca9ca9051a2f359e61c1"
+      },
+      "outputs": [
+        "reviews/round_1/resolution_report.md",
+        "manuscript/sections/01_abstract.md",
+        "manuscript/sections/02_introduction.md",
+        "manuscript/sections/03_related_work.md",
+        "manuscript/sections/04_method.md",
+        "manuscript/sections/05_experiments.md",
+        "manuscript/sections/06_limitations.md",
+        "manuscript/sections/07_conclusion.md"
+      ],
+      "output_hashes": {
+        "reviews/round_1/resolution_report.md": "sha256:d67dbd720c1b58ef82e5eed7a0a20227c3b718f83e4d71fd1241e4b17c319e7a",
+        "manuscript/sections/01_abstract.md": "sha256:7c49aa92051d28243f1e7b4a3b1ea71476d44816ef981942ec9942ab5b0d04ec",
+        "manuscript/sections/02_introduction.md": "sha256:c3dd1a93340448295c87eb280d41bd140ee3f1e709c5fbfd86166ca17e67e5fd",
+        "manuscript/sections/03_related_work.md": "sha256:507f7afacff3a0d2d2f140113f08594ef161a1a59e1114e2a05fa1615f748d9d",
+        "manuscript/sections/04_method.md": "sha256:f19ebe64e362356be56efe1f1a34f9d3941a677333cd2b198d937f4fe231a475",
+        "manuscript/sections/05_experiments.md": "sha256:dc7ff39ec015fa666568b9092629daf285907cf4539f8fbad23de7b54817d2d4",
+        "manuscript/sections/06_limitations.md": "sha256:c32947dc1b73be1345bfbb9764929cfeb50225f9d4066f18a39224dd29003384",
+        "manuscript/sections/07_conclusion.md": "sha256:d444f0468efaf39400982d4ebcd2ff0e1638c17c4a737ab09b61c2e071cd2378"
+      },
+      "updated_at": "2026-11-28T03:19:58Z"
+    },
+    "po-format": {
+      "status": "approved",
+      "input_hashes": {
+        "manuscript/sections/01_abstract.md": "sha256:7c49aa92051d28243f1e7b4a3b1ea71476d44816ef981942ec9942ab5b0d04ec",
+        "manuscript/sections/02_introduction.md": "sha256:c3dd1a93340448295c87eb280d41bd140ee3f1e709c5fbfd86166ca17e67e5fd",
+        "manuscript/sections/03_related_work.md": "sha256:507f7afacff3a0d2d2f140113f08594ef161a1a59e1114e2a05fa1615f748d9d",
+        "manuscript/sections/04_method.md": "sha256:f19ebe64e362356be56efe1f1a34f9d3941a677333cd2b198d937f4fe231a475",
+        "manuscript/sections/05_experiments.md": "sha256:dc7ff39ec015fa666568b9092629daf285907cf4539f8fbad23de7b54817d2d4",
+        "manuscript/sections/06_limitations.md": "sha256:c32947dc1b73be1345bfbb9764929cfeb50225f9d4066f18a39224dd29003384",
+        "manuscript/sections/07_conclusion.md": "sha256:d444f0468efaf39400982d4ebcd2ff0e1638c17c4a737ab09b61c2e071cd2378",
+        "literature/references.bib": "sha256:bb2272f1488a6c241d71444c99450cc75e03b913a8013c3b2aa1d7ad734e9cc4",
+        "visuals/manifest.md": "sha256:f33a2d8db42a208c86131527f7272642b5770fed4b29fc34463e3d08d1d64642"
+      },
+      "outputs": [
+        "submission/main.tex",
+        "submission/main.pdf",
+        "submission/compile.sh",
+        "submission/references.bib",
+        "submission/build_report.md"
+      ],
+      "output_hashes": {
+        "submission/main.tex": "sha256:4991c3a53bcd0e6cee1753ee71dffdfbf487921d22bc2a75488381208502baa9",
+        "submission/main.pdf": "sha256:e669a3583fce8c2905b8aba3a812683458aa7563425336a7e73d1728ec427b37",
+        "submission/compile.sh": "sha256:a161805c119e1e10b3763690db4e5f2a555b0e83c8e9d4456d995794b2f28d8e",
+        "submission/references.bib": "sha256:bb2272f1488a6c241d71444c99450cc75e03b913a8013c3b2aa1d7ad734e9cc4",
+        "submission/build_report.md": "sha256:f33757b84944fd2cf36eb13a3f5c556c5e6bc06861d882e665c23c8251317dd9"
+      },
+      "updated_at": "2026-11-28T03:20:37Z"
     }
   },
   "environment": {

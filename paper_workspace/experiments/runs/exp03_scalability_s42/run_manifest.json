@@ -1,12 +1,12 @@
 {
   "run_id": "exp03_scalability_s42",
   "status": "completed",
-  "started_at": "2026-11-27T14:17:40Z",
-  "finished_at": "2026-11-27T14:17:46Z",
+  "started_at": "2026-11-28T02:55:37Z",
+  "finished_at": "2026-11-28T02:55:43Z",
   "exit_code": 0,
   "is_synthetic": false,
-  "git_commit": "dba1564eb962b9f5bf54a3f7c58e52cde4d4db7d",
-  "git_dirty": false,
+  "git_commit": "d020b23506b97b98265d8fb4b9bfae4670830801",
+  "git_dirty": true,
   "cmd": "paper_workspace/experiments/run_exp03_scalability.sh --seed 42",
   "seeds": [
     42

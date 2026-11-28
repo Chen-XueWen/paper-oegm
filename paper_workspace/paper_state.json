@@ -199,13 +199,13 @@
         "submission/build_report.md"
       ],
       "output_hashes": {
-        "submission/main.tex": "sha256:4991c3a53bcd0e6cee1753ee71dffdfbf487921d22bc2a75488381208502baa9",
-        "submission/main.pdf": "sha256:e669a3583fce8c2905b8aba3a812683458aa7563425336a7e73d1728ec427b37",
+        "submission/main.tex": "sha256:6a8c20fa815f3a69a8696223c0b8ebaa1d72fb1bce015142d0edf1d861ae2a05",
+        "submission/main.pdf": "sha256:5ca0004e3828ecaf2f1494f7e1fa744dfa1245b98f02fb8d38b1af0264f2df07",
         "submission/compile.sh": "sha256:a161805c119e1e10b3763690db4e5f2a555b0e83c8e9d4456d995794b2f28d8e",
         "submission/references.bib": "sha256:bb2272f1488a6c241d71444c99450cc75e03b913a8013c3b2aa1d7ad734e9cc4",
         "submission/build_report.md": "sha256:f33757b84944fd2cf36eb13a3f5c556c5e6bc06861d882e665c23c8251317dd9"
       },
-      "updated_at": "2026-11-28T03:20:37Z"
+      "updated_at": "2026-11-28T03:38:16Z"
     }
   },
   "environment": {

@@ -35,6 +35,7 @@ To supply zero-stochasticity external verification \citep{huang2024selfcorrect} 
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   \textbf{\texttt{state-sync}:} Atomically validates \texttt{paper\_\allowbreak{}state.\allowbreak{}json} (\texttt{tmp} + \texttt{os.\allowbreak{}replace}), probes local binaries (\texttt{pandoc}, \texttt{latexmk}/\allowbreak{}\texttt{pdflatex}, \texttt{bibtex}, \texttt{pdftoppm}, optional \texttt{matplotlib}), counts unresolved \texttt{TODO} or pending-run markers, and flags upstream-modified downstream stages \texttt{stale}.
 \item

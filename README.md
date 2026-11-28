@@ -17,6 +17,10 @@
   <img src="docs/assets/workflow-overview.svg" alt="PaperOEGM End-to-End 10-Skill Research-to-Paper Architecture" width="100%">
 </p>
 
+## Sample Output
+
+To see a complete end-to-end paper generated with **PaperOEGM** (from Stage 0 `po-start` through Stage 9 `po-format`, including verified primary-source literature snapshots, reproducible plots, flat parallel peer-review reports, and double-blind ACM SIGPLAN LaTeX compilation), view the sample compiled PDF at [`paper_workspace/submission/main.pdf`](https://github.com/Chen-XueWen/paper-oegm/blob/main/paper_workspace/submission/main.pdf) (along with the full workspace artifacts under [`paper_workspace/`](https://github.com/Chen-XueWen/paper-oegm/tree/main/paper_workspace)).
+
 ## Modular Skills (`po-*`)
 
 | Stage | Skill | Purpose | Primary Output |
